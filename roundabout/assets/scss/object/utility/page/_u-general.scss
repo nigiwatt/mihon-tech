@@ -1,0 +1,52 @@
+
+/* ------------------------
+/*   object/utility/page/general
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-general .u-n-general {
+  &-title {
+    color: #202f55;
+    font-size: cv(50);
+    font-weight: 700;
+    line-height: 1.13;
+    margin-bottom: rv(60);
+  }
+
+  &-text {
+    color: #000000;
+    font-size: cv(24);
+    line-height: 1.8;
+    margin-bottom: rv(60);
+  }
+
+  &-button {
+    background-color: #202f55;
+    color: #ffffff;
+    font-size: cv(24);
+    font-weight: 700;
+    padding: 0
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-general .u-n-general {
+    &-title {
+      font-size: cv(24);
+      line-height: 1.5;
+      margin-bottom: rv(15);
+    }
+
+    &-text {
+      font-size: cv(16);
+      line-height: 1.85;
+      text-align: center;
+    }
+
+    &-button {
+      font-size: cv(16);
+    }
+  }
+}

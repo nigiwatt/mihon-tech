@@ -1,0 +1,75 @@
+
+footer.-footer
+  .l-n-contact
+    .l-n-inner
+      .l-n-contact__left
+        +image("common/contact_tel.svg")(alt="", class="u-n-contact-tel", loading="lazy")
+        .p-n-footer-phone
+          span.u-n-contact-head 電話でのお問い合わせ
+          span.u-n-contact-number 03-1234-XXXX
+          span.u-n-contact-note 平日 9:00〜17:00　土日祝定休
+      if filename != 'contact' && filename != 'confirm' && filename != 'thanks'
+        .l-n-contact__right
+          +anchor("contact.html")(class="-opacity")
+            span.u-n-contact-en.c-n-en.c-n-ShareTech Contact
+            h2.u-n-contact-title お問い合わせ
+            +image("common/contact_mail.svg")(alt="", class="u-n-contact-mail", loading="lazy")
+
+  .l-n-footer
+    .l-n-inner
+      .p-n-menu
+        .-left
+          +anchor("index.html")(class="-link -opacity")
+            +image("common/footer_logo.svg")(alt="Mihon Tech", class="-logo", loading="lazy")
+            h2.-title ミホン・テック株式会社
+          p.-text 〒101-0041<br>東京都千代田区神田須田町１丁目７番８号　<br class="-only-tb">VORT秋葉原IV　2F<br><br>TEL：03-1234-XXXX<br class="-only-sp">（平日 9:00〜17:00　土日祝定休）<br>E-Mail：<a href="mailto:contact.mihon-tech@example.com" class="-underline">contact.mihon-tech@example.com</a>
+          .-sns
+            +anchor("https://x.com/nigiwatt/")(class="-opacity")
+              +image("common/footer_sns01.svg")(alt="X", class="-sns01", loading="lazy")
+            +anchor("https://www.facebook.com/nigiwatt/")(class="-opacity")
+              +image("common/footer_sns02.svg")(alt="Facebook", class="-sns02", loading="lazy")
+        .-right
+          ul.p-n-common-menu
+            li
+              +anchor("company.html") 会社概要
+              ul.sub-menu
+                li
+                  +anchor("company.html#greeting") 代表ごあいさつ
+                li
+                  +anchor("company.html#company") 会社情報
+                li
+                  +anchor("company.html#sustainable") 社会貢献活動
+                li
+                  +anchor("company.html#news") お知らせ
+                li
+                  +anchor("company.html#history") 沿革
+            li
+              +anchor("products.html") 製品紹介
+              ul.sub-menu
+                li
+                  +anchor("products.html#electronic") 電子部品
+                li
+                  +anchor("products.html#screws") ネジ類
+                li
+                  +anchor("products.html#springs") バネ類
+                li
+                  +anchor("products.html#gears") ギア類
+                li
+                  +anchor("products.html#medical") 医療機器
+                li
+                  +anchor("products.html#industrial") 工業用機器
+            li
+              +anchor("recruit.html") 採用情報
+              ul.sub-menu
+                li
+                  +anchor("recruit.html#entry") 新卒採用
+                li
+                  +anchor("recruit.html#career") キャリア採用
+            li
+              +anchor("contact.html") お問い合わせ
+              ul.sub-menu
+                li
+                  +anchor("privacy.html") 個人情報保護方針
+      small.u-n-footer-copyright ©︎ 2025 MihonTech - 本サイトは架空のコンテンツです
+
+    +anchor("#")(class="u-n-footer-pagetop -opacity -hidden js-n-pagetop" aria-label="ページトップへ戻る")

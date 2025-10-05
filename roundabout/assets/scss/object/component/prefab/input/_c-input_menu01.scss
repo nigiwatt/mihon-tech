@@ -1,0 +1,90 @@
+
+/* ------------------------
+/*   object/component/prefab/input/input_menu01
+/* -------------------------------- */
+
+@use 'sass:map';
+@use '../../../../global' as *;
+
+@if map.has-key($prefabs, input_menu01) or $gallery {
+
+  .c-n-input-menu01 {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: rv(50);
+    height: rv(50);
+    z-index: $order_menu_close;
+
+    // .c-n-input-menu01 .-input-form,
+    // .c-n-input-menu01 .-input-form::before,
+    // .c-n-input-menu01 .-input-form::after
+    .-input-form,
+    .-input-form::before,
+    .-input-form::after {
+      background-color: $color-black-hex;
+      border-radius: rv(3);
+      pointer-events: none;
+      width: rv(30);
+      height: rv(3);
+      transition: background-color $fade_transition+s, transform $fade_transition+s;
+    }
+
+    // .c-n-input-menu01 .-input-form
+    .-input-form {
+      margin: rv(12) 0;
+    }
+
+    // .c-n-input-menu01 .-input-form::before
+    .-input-form::before {
+      position: absolute;
+      top: rv(-9);
+      content: '';
+    }
+
+    // .c-n-input-menu01 .-input-form::after
+    .-input-form::after {
+      position: absolute;
+      top: rv(9);
+      content: '';
+    }
+
+    // .c-n-input-menu01 .-input-form:checked
+    .-input-form:checked {
+      background-color: transparent;
+    }
+
+    // .c-n-input-menu01 .-input-form:checked::before
+    .-input-form:checked::before {
+      background-color: $color-black-hex;
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    // .c-n-input-menu01 .-input-form:checked::after
+    .-input-form:checked::after {
+      background-color: $color-black-hex;
+      top: 0;
+      transform: rotate(-135deg);
+    }
+
+    // .c-n-input-menu01 .-input-label
+    .-input-label {
+      display: inline-flex;
+    }
+
+    // .c-n-input-menu01 .-input-label::before
+    .-input-label::before {
+      content: attr(data-open);
+      font-size: cv(10);
+      font-weight: $string_bold;
+    }
+
+    // .c-n-input-menu01 .-input-form:checked + .-input-label::before
+    .-input-form:checked + .-input-label::before {
+      content: attr(data-close);
+    }
+  }
+}

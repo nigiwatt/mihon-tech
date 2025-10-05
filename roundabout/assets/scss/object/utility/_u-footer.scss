@@ -1,0 +1,139 @@
+
+/* ------------------------
+/*   object/utility/footer
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+.-footer .u-n-contact {
+  &-head {
+    color: #ffffff;
+    font-size: cv(30);
+    font-weight: 700;
+  }
+
+  &-number {
+    color: #ffffff;
+    font-size: cv(60);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  &-note {
+    color: #ffffff;
+    font-size: cv(24);
+    letter-spacing: 0.08em;
+  }
+
+  &-en {
+    color: #ffffff;
+    font-size: cv(40);
+    margin-top: rv(10);
+    margin-bottom: rv(20);
+  }
+
+  &-en::after {
+    border-color: #ffffff;
+    left: calc((100% - rv(90)) / 2);
+  }
+
+  &-title {
+    color: #ffffff;
+    font-size: cv(60);
+    font-weight: 700;
+    margin-bottom: rv(80);
+  }
+
+  &-tel {
+    top: rv(15);
+    left: rv(10);
+    width: rv(64);
+  }
+
+  &-mail {
+    width: rv(100);
+  }
+}
+
+.-footer .u-n-footer {
+  &-copyright {
+    color: #ffffff;
+    font-size: cv(20);
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: rv(55) 0;
+  }
+
+  &-pagetop {
+    background-image: url('../img/common/footer_pagetop.svg');
+    background-size: cover;
+    position: fixed;
+    right: rv(30);
+    bottom: rv(30);
+    width: rv(60);
+    height: rv(60);
+    z-index: 10;
+  }
+
+  &-pagetop.-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-footer .u-n-contact {
+    &-head {
+      font-size: cv(16);
+    }
+
+    &-number {
+      font-size: cv(36);
+    }
+
+    &-note {
+      font-size: cv(12);
+    }
+
+    &-en {
+      font-size: cv(20);
+      margin-top: rv(5);
+      margin-bottom: rv(15);
+    }
+
+    &-en::after {
+      left: calc(50% - rv(45) / 2);
+    }
+
+    &-title {
+      font-size: cv(30);
+      margin-bottom: rv(25);
+    }
+
+    &-tel {
+      width: rv(32);
+      top: rv(10);
+      left: rv(5);
+    }
+
+    &-mail {
+      width: rv(70);
+    }
+  }
+
+  .-footer .u-n-footer {
+    &-copyright {
+      font-size: cv(10);
+      margin: rv(35) 0;
+    }
+
+    &-pagetop {
+      right: rv(15);
+      bottom: rv(30);
+      width: rv(40);
+      height: rv(40);
+    }
+  }
+}

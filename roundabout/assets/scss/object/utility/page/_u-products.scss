@@ -1,0 +1,74 @@
+
+/* ------------------------
+/*   object/utility/page/products
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-products .u-n-fv {
+  &-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.-products .u-n-products {
+  &-en {
+    color: #808080;
+    font-size: cv(40);
+  }
+
+  &-en::after {
+    border-color: #808080;
+  }
+
+  &-title {
+    color: #202f55;
+    font-size: cv(50);
+    font-weight: 700;
+    margin: rv(20) 0;
+  }
+
+  &-text {
+    font-size: cv(20);
+    letter-spacing: 0.04em;
+    line-height: 2;
+  }
+
+  &-image {
+    box-shadow: 0 rv(3) rv(6) rgba(0, 0, 0, 0.3);
+    width: rv(600);
+    margin-top: rv(45);
+    z-index: 1;
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-products .u-n-fv {
+    &-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .-products .u-n-products {
+    &-en {
+      font-size: cv(20);
+    }
+
+    &-title {
+      font-size: cv(28);
+      margin: rv(6) 0;
+    }
+
+    &-text {
+      font-size: cv(12);
+    }
+
+    &-image {
+      width: rv(300);
+      margin-top: rv(42);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

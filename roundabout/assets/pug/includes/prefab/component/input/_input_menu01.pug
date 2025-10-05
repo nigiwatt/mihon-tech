@@ -1,0 +1,13 @@
+
+//- +input_menu01("open", "close")(class="u-n-prefab")
+mixin input_menu01(_open, _close)
+  label.c-n-input-menu01(class=attributes.class)
+    - var attr = attributes
+    - attr.class = ""
+    input.-input-form(
+      type="checkbox"
+    )&attributes(attr)
+    span.-input-label(
+      data-open=_open,
+      data-close=_close
+    )

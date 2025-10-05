@@ -1,0 +1,84 @@
+
+/* ------------------------
+/*   layout/header
+/* -------------------------------- */
+
+@use '../global' as *;
+
+body:has(.-input-form:checked) {
+  overflow: hidden;
+}
+
+.-header .l-n-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+
+  & > div {
+    flex-direction: row;
+    height: rv(120);
+    transition: all 0.3s;
+  }
+
+  &__left {
+    background-color: #ffffff;
+    width: rv(150);
+    height: inherit;
+    transition: all 0.3s;
+  }
+
+  &__center {
+    display: flex;
+    flex-grow: 1;
+    justify-content: right;
+    align-items: center;
+    height: inherit;
+  }
+
+  &__right {
+    display: flex;
+    height: inherit;
+  }
+
+  &__right > * {
+    width: rv(150);
+    transition: all 0.3s;
+  }
+}
+
+.-slim .l-n-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(3px);
+
+  & > div {
+    height: rv(80);
+  }
+
+  &__left {
+    background-color: transparent;
+    width: rv(100);
+  }
+
+  &__right > * {
+    width: rv(100);
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-header .l-n-header {
+    & > div {
+      height: rv(60);
+    }
+
+    &__left {
+      width: rv(75);
+    }
+
+    &__right > * {
+      width: rv(75);
+    }
+  }
+}

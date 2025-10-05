@@ -1,0 +1,149 @@
+#: app/helpers/h-admin-options-detail.php:14
+#: app/helpers/h-admin-options-detail.php:122
+msgid "Detail Settings"
+#: app/helpers/h-admin-options-detail.php:15
+msgid "Detail"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:33
+msgid "Feature Enables"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:44
+msgid "Admin Menu Enables"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:55
+msgid "Debug Display Enables"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:66
+msgid "Google reCAPTCHA v2 Settings"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:140
+msgid "Menus"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:141
+msgid "Widgets"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:162
+msgid "Dashboard"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:163
+msgid "Posts"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:164
+msgid "Media"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:165
+msgid "Pages"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:166
+msgid "Comments"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:167
+msgid "Appearance"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:168
+msgid "Theme File Editor"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:169
+msgid "Plugins"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:170
+msgid "Plugin File Editor"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:171
+msgid "Users"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:172
+msgid "Tools"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:193
+msgid "Notice"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:194
+msgid "Warning"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:195
+msgid "Deprecated"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:219
+msgid "Site key"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:221
+msgid "Secret key"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:255
+msgid "Default widgets"
+msgstr ""
+
+#: app/helpers/h-block-pattern.php:15
+msgid "My Pattern Category"
+msgstr ""
+
+#: app/helpers/h-block-pattern.php:16
+msgid "Colored h2 tags and p tags"
+msgstr ""
+
+#: app/helpers/h-block-pattern.php:23
+msgid "Annotation"
+msgstr ""
+
+#: app/helpers/h-block-pattern.php:24
+msgid "Annotation pattern"
+msgstr ""
+
+#: app/helpers/h-block-pattern.php:27
+msgid "Title"
+msgstr ""
+
+#: app/helpers/h-block-pattern.php:28
+msgid "Text"
+msgstr ""
+
+#: app/helpers/h-breadcrumbs.php:18
+msgid "Top"
+msgstr ""
+
+#: app/helpers/h-breadcrumbs.php:93
+msgid "404 not found"
+msgstr ""
+
+#: app/helpers/h-urls.php:143
+msgid "ID or slug of the posts (Prepend it with a permalink to URL)"
+msgstr ""
+
+#: functions.php:32
+msgid "Roundabout"
+msgstr ""
+
+#: functions.php:33
+msgid "Web Production Nigiwa"
+msgstr ""
+
+#: functions.php:34
+msgid ""
+"The Roundabout theme specializes in allowing you to easily customize the "
+#: parts/breadcrumbs.php:8
+msgid "breadcrumbs"
+msgstr ""

@@ -1,0 +1,8 @@
+
+//- +anchor("#")(class="u-n-prefab") block
+mixin anchor(_href="")
+  a(
+    href=_href == "" ? null : _href,
+    target=_href.indexOf("http") == 0 ? "_blank" : attributes.target
+  )&attributes(attributes)
+    block

@@ -1,0 +1,94 @@
+
+//- Do not assign anything to meta array
+- var meta = []
+
+//- Set the contents of head tags for all pages here
+-
+  const meta_list = {
+    "index": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "見本,製造業,電子機器,エンジニアリング",
+      title: "精度で､応える。電子機器製造ならミホンテック株式会社",
+      //- og_title: "",
+      //- og_type: "",
+      //- og_url: "",
+      //- og_image: "",
+      //- og_site_name: "",
+      //- og_description: "",
+      //- twitter_card: "",
+      //- twitter_site: "",
+      //- fb_app_id: "",
+      //- fb_admins: "",
+      //- canonical: "",
+    },
+    "company": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "代表ごあいさつ,会社情報,社会貢献活動,沿革,お知らせ,会社名,所在地,代表者名,創業,資本金,営業時間・定休日,電話番号,メールアドレス,事業内容,従業員数,許認可,取引先銀行",
+      title: "会社概要 | ミホンテック株式会社",
+    },
+    "products": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "電子部品,ネジ類,バネ類,ギア類,医療機器,工業用機械",
+      title: "製品紹介 | ミホンテック株式会社",
+    },
+    "recruit": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "新卒採用,キャリア採用,職種,仕事内容,雇用形態,必須条件,勤務時間,休日・休暇,給与,賞与,待遇・福利厚生",
+      title: "採用情報 | ミホンテック株式会社",
+    },
+    "contact": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "見積もり,新卒採用,キャリア採用,ご相談,個人情報保護方針,平日,土日祝定休",
+      title: "お問い合わせ | ミホンテック株式会社",
+    },
+    "confirm": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "見積もり,新卒採用,キャリア採用,ご相談,個人情報保護方針,平日,土日祝定休",
+      title: "送信内容の確認 | ミホンテック株式会社",
+    },
+    "thanks": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "見積もり,新卒採用,キャリア採用,ご相談,個人情報保護方針,平日,土日祝定休",
+      title: "送信いただきありがとうございます | ミホンテック株式会社",
+    },
+    "privacy": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "プライバシーポリシー,個人情報の取扱い,住所,社名,代表取締役,担当部署",
+      title: "個人情報保護方針 | ミホンテック株式会社",
+    },
+    "news": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "お知らせ",
+      title: "お知らせ | ミホンテック株式会社",
+    },
+    "article": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "お知らせ",
+      title: "ホームページをリニューアルしました | ミホンテック株式会社",
+    },
+    "general": {
+      description: "コーディングスキルを紹介するために制作したサイトです。ミホンテック株式会社は架空の企業で、実在の人物・団体とは関係ございません。",
+      keywords: "汎用",
+      title: "汎用ページ | ミホンテック株式会社",
+    },//- Term
+  }
+
+//- Set the WebFonts to use here
+-
+  const fonts = [
+    //- "https://use.fontawesome.com/releases/v6.4.2/css/all.css",
+    "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap",
+    "https://fonts.googleapis.com/css2?family=Share+Tech&display=swap",
+  ]
+
+//- Set "min-width" on the image's media element
+- const sp_min_width = 750
+- const tb_min_width = 1080
+- const pc_min_width = 1640
+- const high_min_width = 1920
+
+//- Prepare the head tag content
+- const { filename, relation } = getFilename();
+
+if meta_list[filename.replaceAll('/', '_')]
+  - meta = meta_list[filename.replaceAll('/', '_')]

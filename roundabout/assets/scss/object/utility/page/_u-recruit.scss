@@ -1,0 +1,73 @@
+
+/* ------------------------
+/*   object/utility/page/recruit
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-recruit .u-n-fv {
+  &-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.-recruit .u-n-recruit {
+  &-title {
+    color: #202f55;
+    font-size: cv(40);
+    font-weight: 700;
+    margin-bottom: rv(56);
+  }
+
+  &-button {
+    background-color: #202f55;
+    color: #ffffff;
+    font-size: cv(24);
+    font-weight: 700;
+    margin: rv(80) auto 0;
+    z-index: 2;
+  }
+}
+
+.-recruit .u-n-separate {
+  &-image {
+    width: 100%;
+    height: rv(320);
+    overflow: hidden;
+  }
+
+  &-image img {
+    position: relative;
+    object-fit: contain;
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-recruit .u-n-fv {
+    &-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .-recruit .u-n-recruit {
+    &-title {
+      font-size: cv(24);
+      line-height: 1.58;
+      margin-bottom: rv(26);
+    }
+
+    &-button {
+      font-size: cv(14);
+      margin-top: rv(40);
+    }
+  }
+
+  .-recruit .u-n-separate {
+    &-image {
+      width: rv(375);
+      height: rv(240);
+      object-fit: cover;
+    }
+  }
+}

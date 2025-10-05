@@ -1,0 +1,179 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Roundabout\n"
+"POT-Creation-Date: 2025-10-03 13:52+0900\n"
+"PO-Revision-Date: 2025-10-03 13:54+0900\n"
+"Last-Translator: \n"
+"Language-Team: Roundabout Developers\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: _e;__;_n\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: app/helpers/h-admin-options-detail.php:14
+#: app/helpers/h-admin-options-detail.php:122
+msgid "Detail Settings"
+msgstr "詳細設定"
+
+#: app/helpers/h-admin-options-detail.php:15
+msgid "Detail"
+msgstr "詳細"
+
+#: app/helpers/h-admin-options-detail.php:33
+msgid "Feature Enables"
+msgstr "機能を有効化"
+
+#: app/helpers/h-admin-options-detail.php:44
+msgid "Admin Menu Enables"
+msgstr "管理メニューの有効化"
+
+#: app/helpers/h-admin-options-detail.php:55
+msgid "Debug Display Enables"
+msgstr "デバッグ表示の有効化"
+
+#: app/helpers/h-admin-options-detail.php:66
+msgid "Google reCAPTCHA v2 Settings"
+msgstr "Google reCAPTCHA v2 設定"
+
+#: app/helpers/h-admin-options-detail.php:140
+msgid "Menus"
+msgstr "メニュー"
+
+#: app/helpers/h-admin-options-detail.php:141
+msgid "Widgets"
+msgstr "ウィジェット"
+
+#: app/helpers/h-admin-options-detail.php:162
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+#: app/helpers/h-admin-options-detail.php:163
+msgid "Posts"
+msgstr "投稿"
+
+#: app/helpers/h-admin-options-detail.php:164
+msgid "Media"
+msgstr "メディア"
+
+#: app/helpers/h-admin-options-detail.php:165
+msgid "Pages"
+msgstr "固定ページ"
+
+#: app/helpers/h-admin-options-detail.php:166
+msgid "Comments"
+msgstr "コメント"
+
+#: app/helpers/h-admin-options-detail.php:167
+msgid "Appearance"
+msgstr "外観"
+
+#: app/helpers/h-admin-options-detail.php:168
+msgid "Theme File Editor"
+msgstr "テーマファイルエディター"
+
+#: app/helpers/h-admin-options-detail.php:169
+msgid "Plugins"
+msgstr "プラグイン"
+
+#: app/helpers/h-admin-options-detail.php:170
+msgid "Plugin File Editor"
+msgstr "プラグインファイルエディター"
+
+#: app/helpers/h-admin-options-detail.php:171
+msgid "Users"
+msgstr "ユーザー"
+
+#: app/helpers/h-admin-options-detail.php:172
+msgid "Tools"
+msgstr "ツール"
+
+#: app/helpers/h-admin-options-detail.php:193
+msgid "Notice"
+msgstr "通知（Notice）"
+
+#: app/helpers/h-admin-options-detail.php:194
+msgid "Warning"
+msgstr "警告（Warning）"
+
+#: app/helpers/h-admin-options-detail.php:195
+msgid "Deprecated"
+msgstr "廃止（Depricated）"
+
+#: app/helpers/h-admin-options-detail.php:219
+msgid "Site key"
+msgstr "サイトキー"
+
+#: app/helpers/h-admin-options-detail.php:221
+msgid "Secret key"
+msgstr "シークレットキー"
+
+#: app/helpers/h-admin-options-detail.php:255
+msgid "Default widgets"
+msgstr "デフォルト ウィジェット"
+
+#: app/helpers/h-block-pattern.php:15
+msgid "My Pattern Category"
+msgstr "マイ パターン カテゴリー"
+
+#: app/helpers/h-block-pattern.php:16
+msgid "Colored h2 tags and p tags"
+msgstr "色つきのh2タグとpタグ"
+
+#: app/helpers/h-block-pattern.php:23
+msgid "Annotation"
+msgstr "注釈"
+
+#: app/helpers/h-block-pattern.php:24
+msgid "Annotation pattern"
+msgstr "注釈のパターンです"
+
+#: app/helpers/h-block-pattern.php:27
+msgid "Title"
+msgstr "タイトル"
+
+#: app/helpers/h-block-pattern.php:28
+msgid "Text"
+msgstr "テキスト"
+
+#: app/helpers/h-breadcrumbs.php:18
+msgid "Top"
+msgstr "トップ"
+
+#: app/helpers/h-breadcrumbs.php:93
+msgid "404 not found"
+msgstr "ページが見つかりませんでした"
+
+#: app/helpers/h-urls.php:143
+msgid "ID or slug of the posts (Prepend it with a permalink to URL)"
+msgstr "投稿の ID またはスラッグ名（パーマリンクが URL の先頭に追加されます）"
+
+#: functions.php:32
+msgid "Roundabout"
+msgstr "ラウンドアバウト"
+
+#: functions.php:33
+msgid "Web Production Nigiwa"
+msgstr "ウェブ制作ニギワ"
+
+#: functions.php:34
+msgid ""
+"The Roundabout theme specializes in allowing you to easily customize the "
+"appearance and functionality without touching PHP code as much as possible. "
+"The internal directory structure is designed to be simple, making it easy to "
+"make future changes to the source code. Additionally, this theme is "
+"optimized based on the MVC model, ensuring consistent dependencies in "
+"appearance and functionality, allowing for stable WordPress operation."
+msgstr ""
+"ラウンドアバウトテーマは、極力 PHP コードに触れることなく簡単に、外観や機能を"
+"カスタマイズできることに特化しています。内部のディレクトリ構造はシンプルに設"
+"計していますので、将来的なソースコードの変更を容易に行うことができます。な"
+"お、このテーマは MVC モデルに基づき最適化されており、外観と機能における依存関"
+"係の一貫性が保たれているため、安定的な WordPress の運用が可能になります。"
+
+#: parts/breadcrumbs.php:8
+msgid "breadcrumbs"
+msgstr "パンくずリスト"

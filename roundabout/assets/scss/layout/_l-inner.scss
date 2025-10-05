@@ -1,0 +1,42 @@
+
+/* ------------------------
+/*   layout/inner
+/* -------------------------------- */
+
+@use '../global' as *;
+
+.l-n-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: rv($breakpoint_pc_min_width);
+  height: inherit;
+  margin: 0 auto;
+  padding-left: rv(100);
+  padding-right: rv(100);
+}
+
+.l-n-inner.-wide {
+  min-width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@include breakpoint('tb') {
+  .l-n-inner {
+    min-width: 100%;
+    max-width: 100%;
+    padding-left: rv(50);
+    padding-right: rv(50);
+  }
+}
+
+@include breakpoint('sp') {
+  .l-n-inner {
+    min-width: 100%;
+    max-width: 100%;
+    padding-left: rv(15);
+    padding-right: rv(15);
+  }
+}

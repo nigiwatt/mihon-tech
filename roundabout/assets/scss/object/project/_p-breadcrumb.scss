@@ -1,0 +1,65 @@
+
+/* ------------------------
+/*   object/project/breadcrumb
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+.p-n-breadcrumb {
+  width: 100%;
+  margin-top: rv(40);
+
+  & .-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rv(5) 0;
+  }
+
+  & li {
+    margin-right: rv(40);
+  }
+
+  & li * {
+    display: block;
+  }
+
+  & a {
+    color: #000000;
+    line-height: 1.55;
+  }
+
+  & a::after {
+    border-right: rv(1.5) solid #000000;
+    border-bottom: rv(1.5) solid #000000;
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: rv(-20);
+    width: rv(10);
+    height: rv(10);
+    pointer-events: none;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  & li:nth-last-child(1) a::after {
+    display: none;
+  }
+}
+
+@include breakpoint(sp) {
+
+  .p-n-breadcrumb {
+    margin-top: rv(20);
+
+    & a,
+    & span {
+      font-size: cv(12);
+    }
+
+    & a::after {
+      border-width: rv(1);
+      width: rv(7.5);
+      height: rv(7.5);
+    }
+  }
+}

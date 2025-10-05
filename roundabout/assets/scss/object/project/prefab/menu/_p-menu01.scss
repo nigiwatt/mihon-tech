@@ -1,0 +1,135 @@
+
+/* ------------------------
+/*   object/project/prefab/menu/menu01
+/* -------------------------------- */
+
+@use 'sass:map';
+@use '../../../../global' as *;
+
+@if map.has-key($prefabs, menu01) or $gallery {
+
+  $menu_height: rv(60);
+  $menu_check_margin: rv(5);
+
+  .p-n-menu01 {
+    border: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $menu_height;
+
+    // .p-n-menu01:has(label input:checked)
+    &:has(label input:checked) {
+      z-index: $order_menu;
+    }
+
+    // .p-n-menu01 .-menu-check
+    .-menu-check {
+      display: none;
+      margin: $menu_check_margin;
+    }
+
+    // .p-n-menu01 .-menu-check:has(input:checked) + .-menu-modal .-menu-blind
+    .-menu-check:has(input:checked) + .-menu-modal .-menu-blind {
+      background-color: rgba(0, 0, 0, 0.5);
+      visibility: visible;
+    }
+
+    // .p-n-menu01 .-menu-check:has(input:checked) + .-menu-modal .-menu-frame
+    .-menu-check:has(input:checked) + .-menu-modal .-menu-frame {
+      transform: translate(0vw, 0vh);
+    }
+
+    // .p-n-menu01 .-menu-check:has(input:checked) + .-menu-modal .-menu-content
+    .-menu-check:has(input:checked) + .-menu-modal .-menu-content {
+      padding: rv(20);
+      padding-top: $menu_height;
+    }
+
+    // .p-n-menu01 .-menu-modal
+    .-menu-modal {
+      position: absolute;
+      width: 100%;
+      height: inherit;
+    }
+
+    // .p-n-menu01 .-menu-blind
+    .-menu-blind {
+      display: none;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      visibility: hidden;
+      transition: background-color $fade_transition+s;
+    }
+
+    // .p-n-menu01 .-menu-frame
+    .-menu-frame {
+      background-color: $color_white_hex;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      height: inherit;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+      transition: transform $fade_transition_transform+s;
+    }
+
+    // .p-n-menu01 .-menu-content
+    .-menu-content {
+      height: inherit;
+    }
+  }
+
+  @include breakpoint(sp) {
+
+    .p-n-menu01 {
+
+      // .p-n-menu01 .-menu-check
+      .-menu-check {
+        display: flex;
+      }
+
+      // .p-n-menu01 .-menu-blind
+      .-menu-blind {
+        display: block;
+      }
+
+      // .p-n-menu01 .-menu-frame
+      .-menu-frame {
+        height: 100vh;
+        scrollbar-width: none;
+      }
+
+      // .p-n-menu.-menu-left .-menu-frame
+      &.-menu-left .-menu-frame {
+        transform: translateX(105vw);
+      }
+
+      // .p-n-menu.-menu-right .-menu-frame
+      &.-menu-right .-menu-frame {
+        transform: translateX(-105vw);
+      }
+
+      // .p-n-menu.-menu-top .-menu-frame
+      &.-menu-top .-menu-frame {
+        transform: translateY(105vh);
+      }
+
+      // .p-n-menu.-menu-bottom .-menu-frame
+      &.-menu-bottom .-menu-frame {
+        transform: translateY(-105vh);
+      }
+
+      // .p-n-menu01 .-menu-content
+      .-menu-content {
+        width: 100%;
+        height: calc(100% + 1px); /* Required to enable overscroll-behavior-y */
+      }
+    }
+  }
+}

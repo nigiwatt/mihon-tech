@@ -1,0 +1,53 @@
+
+/* ------------------------
+/*   object/utility/page/thanks
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-contact .u-n-contact {
+  &-button {
+    background-color: #202f55;
+    color: #ffffff;
+    font-size: cv(24);
+    font-weight: 700;
+    padding: 0
+  }
+
+  &-title {
+    color: #202f55;
+    font-size: cv(50);
+    font-weight: 700;
+    margin-bottom: rv(60);
+  }
+
+  &-text02 {
+    font-size: cv(24);
+    letter-spacing: 0.04em;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: rv(110);
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-contact .u-n-contact {
+    &-button {
+      font-size: cv(16);
+    }
+
+    &-title {
+      font-size: cv(24);
+      text-align: center;
+      margin-top: rv(10);
+      margin-bottom: rv(30);
+    }
+
+    &-text02 {
+      font-size: cv(16);
+      line-height: 1.75;
+      margin-bottom: rv(60);
+    }
+  }
+}

@@ -1,0 +1,101 @@
+
+include /includes/_variables
+include /includes/_prefab
+
+-
+  const styles = [
+    //- "./assets/css/contact.min.css",
+  ]
+
+-
+  const scripts = [
+    //- "./assets/js/contact.min.js",
+    //- "./assets/js/jquery.min.js",
+    //- "./assets/js/swiper.min.js",
+    "./assets/js/yubinbango.min.js",
+  ]
+
+doctype html
+html(lang="ja")
+  include /includes/_head
+
+  body
+    //- include /includes/_trace
+    include /_header
+
+    main.-contact
+      .l-n-fv
+        .l-n-inner.-wide.js-n-fv
+          .l-n-fv__main.c-n-view
+            h1 お問い合わせ
+      .l-n-breadcrumb
+        .l-n-inner
+          nav.p-n-breadcrumb(aria-label="パンくずリスト")
+            ol.-list(itemscope, itemtype="https://schema.org/BreadcrumbList")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                +anchor('index.html')(class="-underline", itemprop="item")
+                  span(itemprop="name") トップ
+                meta(itemprop="position", content="1")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                span(itemprop="name") お問い合わせ
+                meta(itemprop="position", content="2")
+      #contact.l-n-contact
+        .l-n-inner
+          form.l-n-contact__form.js-n-contact.h-adr(action="confirm.html")
+            .p-n-contact.js-n-contact-select
+              label.-label(for="type") お問い合わせ種別
+                span.-require 必須
+              span.u-n-contact-triangle
+                select.-select#type
+                  option 見積もりのご依頼
+                  option 新卒採用に応募したい
+                  option キャリア採用に応募したい
+                  option その他ご相談
+            .p-n-contact.js-n-contact-require
+              label.-label(for="name") お名前
+                span.-require 必須
+              .-forms(data-error="お名前は必須です")
+                input.-input#name(type="text", autocomplete="name", placeholder="見本　一郎")
+            .p-n-contact.js-n-contact-require
+              label.-label(for="kana") ふりがな
+                span.-require 必須
+              .-forms(data-error="ふりがなは必須です")
+                input.-input#kana(type="text", placeholder="みほん　いちろう")
+            .p-n-contact.js-n-contact-organization
+              label.-label(for="organization") 会社名
+              .-forms
+                input.-input#organization(type="text", autocomplete="organization")
+            .p-n-contact.js-n-contact-require
+              label.-label(for="postal-code") 郵便番号
+                span.-require 必須
+              .-forms(data-error="郵便番号は必須です")
+                input.-input.-short#postal-code.p-postal-code(type="text", maxlength="7", autocomplete="postal-code", placeholder="1010041")
+                input.-button.c-n-button.-opacity(type="button", value="検索")
+            .p-n-contact.js-n-contact-require
+              label.-label(for="street-address") 住所
+                span.-require 必須
+              .-forms(data-error="住所は必須です")
+                input.-input#street-address.p-region.p-locality.p-street-address.p-extended-address(type="text", autocomplete="street-address")
+            .p-n-contact.js-n-contact-require
+              label.-label(for="email") メールアドレス
+                span.-require 必須
+              .-forms(data-error="メールアドレスをご確認ください")
+                input.-input#email(type="text", autocomplete="email", placeholder="contact.mihon-tech@example.com")
+            .p-n-contact.js-n-contact-require
+              label.-label(for="tel") 電話番号
+                span.-require 必須
+              .-forms(data-error="電話番号は必須です")
+                input.-input#tel(type="text", autocomplete="tel", placeholder="03-1234-XXXX")
+            .p-n-contact
+              label.-label(for="content") ご質問等あればご記入ください
+              .-forms
+                textarea.-textarea#content
+            .p-n-contact.js-n-contact-require
+              label.-forms.-agreement(data-error="同意は必須です")
+                input.-check#agreement(type="checkbox")
+                span.u-n-contact-text01 <a href="privacy.html" target="_blank">個人情報保護方針</a>に同意する
+            .p-n-contact
+              input.-confirm.c-n-button.-opacity.js-n-contact-confirm(type="submit", value="確認")
+            input.p-country-name(type="hidden", value="Japan")
+
+    include /_footer

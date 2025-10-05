@@ -1,0 +1,214 @@
+
+include /includes/_variables
+include /includes/_prefab
+
+-
+  const styles = [
+    //- "./assets/css/company.min.css",
+  ]
+
+-
+  const scripts = [
+    //- "./assets/js/company.min.js",
+    //- "./assets/js/jquery.min.js",
+    "./assets/js/swiper.min.js",
+  ]
+
+doctype html
+html(lang="ja")
+  include /includes/_head
+
+  body
+    //- include /includes/_trace
+    include /_header
+
+    main.-company
+      .l-n-fv
+        .l-n-inner.-wide.js-n-fv
+          .l-n-fv__main.c-n-view
+            h1 会社概要
+      .l-n-breadcrumb
+        .l-n-inner
+          nav.p-n-breadcrumb(aria-label="パンくずリスト")
+            ol.-list(itemscope, itemtype="https://schema.org/BreadcrumbList")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                +anchor('index.html')(class="-underline", itemprop="item")
+                  span(itemprop="name") トップ
+                meta(itemprop="position", content="1")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                span(itemprop="name") 会社概要
+                meta(itemprop="position", content="2")
+        .l-n-inner
+          ul.u-n-fv-list.c-n-submenu
+            li.-opacity
+              +anchor("#greeting") 代表ごあいさつ
+            li.-opacity
+              +anchor("#company") 会社情報
+            li.-opacity
+              +anchor("#sustainable") 社会貢献活動
+            li.-opacity
+              +anchor("#history") 沿革
+            li.-opacity
+              +anchor("#news") お知らせ
+      #greeting.l-n-greeting
+        .l-n-inner
+          h2.u-n-greeting-title.c-n-head
+            span.c-n-text-anim.js-n-text-anim.is-n-hide 代表ごあいさつ
+          .l-n-greeting__left
+            +image("company/greeting_image.webp","company/greeting_image_sp.webp")(alt="代表取締役", class="u-n-greeting-image")
+          p.u-n-greeting-text 私たちは創業以来、技術への飽くなき探求とクオリティへのこだわりを軸に、ものづくりの現場に誠実に向き合ってまいりました。<br><br>昨今、電子機器をはじめとする産業はグローバル化とともに急速に進化し、かつてない精度や柔軟性が求められています。当社はこうした変化に果敢に挑み、世界中のパートナーとともに、新たな価値を創出し続けています。<br><br>技術は人が育み、人は挑戦によって成長します。当社のエンジニアは、国内外を問わず多くの現場で経験を重ね、高い評価をいただいております。<br><br>これからも私たちは、積み重ねてきた技術力と現場力を武器に、持続可能な社会の実現に貢献しながら、未来につながるものづくりを追求してまいります。<br><br>今後とも変わらぬご支援を賜りますようお願い申し上げます。
+          .l-n-greeting__right
+            +image("company/greeting_name.webp","company/greeting_name_sp.webp")(alt="見本 一郎", class="u-n-greeting-name")
+      .l-n-separate
+        .l-n-inner.-wide
+          +image("company/separate_image01.webp","company/separate_image01_sp.webp")(alt="", class="u-n-separate-image js-n-separate")
+      #company.l-n-company
+        .l-n-inner
+          .l-n-company__head
+            h2.u-n-company-title.c-n-head
+              span.c-n-text-anim.js-n-text-anim.is-n-hide 会社情報
+            span.u-n-company-en.c-n-ShareTech Company
+          .l-n-company__list
+            ul.p-n-company-list
+              li.-title 会社名
+              li.-data ミホン・テック株式会社
+            ul.p-n-company-list
+              li.-title 所在地
+              li.-data 〒101-0041　<br class="-only-sp">東京都千代田区神田須田町１丁目７番８号　<br class="-only-sp">VORT秋葉原IV　2F
+            ul.p-n-company-list
+              li.-title 代表者名
+              li.-data 見本　一郎
+            ul.p-n-company-list
+              li.-title 創業
+              li.-data 2017年（平成29年）4月
+            ul.p-n-company-list
+              li.-title 資本金
+              li.-data ¥ 150,000,000
+            ul.p-n-company-list
+              li.-title 営業時間・定休日
+              li.-data 平日 9:00〜17:00　土日祝定休
+            ul.p-n-company-list
+              li.-title 電話番号
+              li.-data 電話：03-1234-XXXX　FAX：03-1234-XXXX
+            ul.p-n-company-list
+              li.-title メールアドレス
+              li.-data contact.mihon-tech@example.com
+            ul.p-n-company-list
+              li.-title 事業内容
+              li.-data 精密部品の製造・加工<br>医療用機器、工業用機械類の製造もしくはメンテナンス
+            ul.p-n-company-list
+              li.-title 従業員数
+              li.-data 125名
+            ul.p-n-company-list
+              li.-title 許認可
+              li.-data 医療機器製造販売業許可番号 AABCDEEEEE<br>ISO 9001 / ISO 14001 取得
+            ul.p-n-company-list
+              li.-title 取引先銀行
+              li.-data 三菱東京UFJ銀行　神田駅前支店<br>りそな銀行　神田支店<br>三井住友銀行　神田駅前支店
+      #sustainable.l-n-sustainable
+        .l-n-inner.-wide
+          h2.u-n-sustainable-title.c-n-head
+            span.c-n-text-anim.js-n-text-anim.is-n-hide 社会貢献活動
+          p.u-n-sustainable-text 私たちは、国内外を問わず活躍できる<br class="-only-sp">エンジニアの育成に力を注ぎ、<br>社員一丸となって、世界のものづくりを支える<br class="-only-sp">パートナーシップ企業を目指してまいります。
+          ul.p-n-sustainable-list
+            li.is-n-hide.-fade-chain01.-fade-in-left.-fade-delay01 困難に挑戦するエンジニアの育成
+            li.is-n-hide.-fade-chain01.-fade-in-left.-fade-delay02 技術と創造力で、<br class="-only-sp">社会の課題に応えるソリューションを提供
+            li.is-n-hide.-fade-chain01.-fade-in-left.-fade-delay03 持続可能な社会の実現に貢献するための<br class="-only-sp">取り組みを推進
+          +swiper01("defer")(
+            class="u-n-prefab l-n-sustainable__swiper",
+            data-width="480,240",
+            data-margin="15,15",
+            data-options="notAllowTouchMove | linear",
+            data-delay="3000",
+            data-speed="5000"
+          )
+            .swiper-slide
+              +image("company/sustainable_slide01.webp","company/sustainable_slide01_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide02.webp","company/sustainable_slide02_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide03.webp","company/sustainable_slide03_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide04.webp","company/sustainable_slide04_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide05.webp","company/sustainable_slide05_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide01.webp","company/sustainable_slide01_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide02.webp","company/sustainable_slide02_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide03.webp","company/sustainable_slide03_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide04.webp","company/sustainable_slide04_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+            .swiper-slide
+              +image("company/sustainable_slide05.webp","company/sustainable_slide05_sp.webp")(alt="スライド", class="u-n-sustainable-slide")
+      #history.l-n-history
+        .l-n-inner
+          .l-n-history__head
+            h2.u-n-history-title.c-n-head
+              span.c-n-text-anim.js-n-text-anim.is-n-hide 沿革
+            span.u-n-history-en.c-n-ShareTech History
+          .l-n-history__list
+            ul.p-n-history-list.is-n-hide.-fade-chain02.-fade-delay01
+              li.-title.c-n-ShareTech 2017
+              li.-data 創業。NC旋盤を用いた小ロット部品加工を開始
+            ul.p-n-history-list.is-n-hide.-fade-chain02.-fade-delay02
+              li.-title.c-n-ShareTech 2019
+              li.-data 社屋移転および設備増設により受注体制を強化
+            ul.p-n-history-list.is-n-hide.-fade-chain02.-fade-delay03
+              li.-title.c-n-ShareTech 2022
+              li.-data 医療機器・工業用機械製造分野へ事業を拡大
+            ul.p-n-history-list.is-n-hide.-fade-chain02.-fade-delay04
+              li.-title.c-n-ShareTech 2023
+              li.-data 大手メーカーとの取引開始により事業領域を全国へ
+            ul.p-n-history-list.is-n-hide.-fade-chain02.-fade-delay05
+              li.-title.c-n-ShareTech 2024
+              li.-data 次世代製造人材育成プログラムを社内導入
+          .l-n-history__images
+            +image("company/history_image01.webp","company/history_image01_sp.webp")(alt="history", class="u-n-history-image")
+            +image("company/history_image02.webp","company/history_image02_sp.webp")(alt="history", class="u-n-history-image")
+      .l-n-separate
+        .l-n-inner.-wide
+          +image("company/separate_image02.webp","company/separate_image02_sp.webp")(alt="", class="u-n-separate-image js-n-separate")
+      #news.l-n-news
+        .l-n-inner
+          .l-n-news__head
+            h2.u-n-news-title.c-n-head
+              span.c-n-text-anim.js-n-text-anim.is-n-hide お知らせ
+            span.u-n-news-en.c-n-ShareTech News
+          .l-n-news__list
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2025.07.07
+                li.-data ホームページをリニューアルしました
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2025.07.02
+                li.-data 【重要】夏季休業期間のご案内
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2025.05.26
+                li.-data SDGs テクノロジーフェア 2025 展示会出展のお知らせ
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2025.04.28
+                li.-data 【重要】GW 休業期間のご案内
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2025.02.28
+                li.-data 【新製品】高耐熱コネクタ「H-300 シリーズ」発売のお知らせ
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2025.01.06
+                li.-data 明けましておめでとうございます。本年もどうぞよろしくお願い申し上げます
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2024.10.27
+                li.-data 未来にツナゲル産業展 2024 にご来場ありがとうございました
+            +anchor("#")(class="p-n-news-list")
+              ul
+                li.-title.c-n-ShareTech 2024.10.15
+                li.-data 【新製品】工業用板金プレス機「BP-6000 シリーズ」発売のお知らせ
+          +anchor("#")(class="u-n-news-button c-n-button -opacity") 過去のお知らせ
+
+    include /_footer

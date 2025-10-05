@@ -1,0 +1,172 @@
+
+/* ------------------------
+/*   foundation/base
+/* -------------------------------- */
+
+@use '../global' as *;
+
+/* for Tablet */
+@if $breakpoint_sp_min_width != 0 {
+  @if $breakpoint_tb_min_width != 0 {
+    @media (min-width: ($breakpoint_sp_min_width + 'px')) {
+      :root {
+        @if $enable_pixel_size {
+          --rv: #{$string_base_px}px;
+        } @else {
+          --rv: calc((100vw - var(--sb)) / #{divide($breakpoint_tb_min_width, $string_base_px * $breakpoint_tb_ratio)});
+        }
+        --cv: calc(1 * var(--rv));
+      }
+    }
+  } @else if $breakpoint_pc_min_width != 0 {
+    @media (min-width: ($breakpoint_sp_min_width + 'px')) {
+      :root {
+        @if $enable_pixel_size {
+          --rv: #{$string_base_px}px;
+        } @else {
+          --rv: calc((100vw - var(--sb)) / #{divide($breakpoint_pc_min_width, $string_base_px * $breakpoint_tb_ratio)});
+        }
+        --cv: calc(1 * var(--rv));
+      }
+    }
+  }
+}
+
+/* for PC (Scaling) */
+@if $breakpoint_tb_min_width != 0 and $breakpoint_pc_min_width != 0 {
+  @media (min-width: ($breakpoint_tb_min_width + 'px')) {
+    :root {
+      @if $enable_pixel_size {
+        --rv: #{$string_base_px}px;
+      } @else {
+        --rv: calc((100vw - var(--sb)) / #{divide($breakpoint_pc_min_width, $string_base_px)});
+      }
+      --cv: calc(1 * var(--rv));
+    }
+  }
+}
+
+/* for PC (Fixing) */
+@if $breakpoint_pc_min_width != 0 {
+  @if $breakpoint_pc_min_width < $breakpoint_high_min_width {
+    @media (min-width: ($breakpoint_pc_min_width + 'px')) {
+      :root {
+        @if $enable_pixel_size {
+          --rv: #{$string_base_px}px;
+        } @else {
+          --rv: calc(((#{$breakpoint_pc_min_width}px - var(--sb)) / #{$breakpoint_pc_min_width}) * #{$string_base_px});
+        }
+        --cv: calc(1 * var(--rv));
+      }
+    }
+  }
+}
+
+/* for PC (High resolution) */
+@media (min-width: ($breakpoint_high_min_width + 'px')) {
+  :root {
+    @if $enable_pixel_size {
+      --rv: #{$string_base_px}px;
+    } @else if $zoom_by_high_resolution {
+      --rv: calc((100vw - var(--sb)) / #{divide($breakpoint_high_min_width, $string_base_px)});
+    } @else {
+      --rv: calc(((#{$breakpoint_pc_min_width}px - var(--sb)) / #{$breakpoint_pc_min_width}) * #{$string_base_px});
+    }
+    --cv: calc(1 * var(--rv));
+  }
+}
+
+/* for Mobile */
+@if $breakpoint_sp_min_width != 0 {
+  @media (max-width: ($breakpoint_sp_min_width + 'px')) {
+    :root {
+      --rv: calc((100vw - var(--sb)) / #{divide($breakpoint_sp_min_width, $string_base_px * $breakpoint_sp_ratio)});
+      --cv: calc(1 * var(--rv));
+    }
+  }
+}
+
+/* Notify Javascript */
+:root {
+  --breakpoint-sp: #{$breakpoint_sp_min_width};
+  --breakpoint-tb: #{$breakpoint_tb_min_width};
+  --breakpoint-pc: #{$breakpoint_pc_min_width};
+  --breakpoint-high: #{$breakpoint_high_min_width};
+  --enable-pixel-size: #{$enable_pixel_size};
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  visibility: hidden;
+}
+
+body.-loaded {
+  visibility: visible;
+}
+
+[class^='-'], [class*='-n-'],
+[class^='-']::before, [class*='-n-']::before,
+[class^='-']::after, [class*='-n-']::after {
+  box-sizing: border-box;
+}
+
+[class^='-'], [class*='-n-'] {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+[class^='-']::before, [class*='-n-']::before,
+[class^='-']::after, [class*='-n-']::after {
+  display: inline-block;
+}
+
+a:not([class*='-n-']) {
+  color: $color_link_hex;
+  text-decoration: underline;
+}
+
+a[class^='-'], a[class*='-n-'] {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.-opacity {
+  transition: opacity $fade_transition_opacity+s;
+}
+
+.-opacity:hover {
+  opacity: 0.7;
+}
+
+.-underline:hover {
+  text-decoration: underline;
+}
+
+ul[class^='-'], ul[class*='-n-'],
+ol[class^='-'], ol[class*='-n-'] {
+  list-style: none;
+}
+
+button[class^='-'], button[class*='-n-'],
+input[class^='-'], input[class*='-n-'],
+select[class^='-'], select[class*='-n-'],
+textarea[class^='-'], textarea[class*='-n-'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+[class^='-'] picture, [class*='-n-'] picture {
+  display: flex;
+}
+
+[class^='-'] img, [class*='-n-'] img {
+  image-rendering: auto;
+  width: 100%;
+  height: auto;
+}

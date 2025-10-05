@@ -1,0 +1,276 @@
+
+/* ------------------------
+/*   object/project/contact
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+.p-n-contact {
+  max-height: rv(240);
+  margin-bottom: rv(30);
+
+  &:nth-of-type(4) {
+    transition: all 0.5s;
+  }
+
+  & .-label {
+    font-size: cv(24);
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: rv(360);
+    padding: rv(17) 0;
+    padding-right: rv(20);
+  }
+
+  & .-require {
+    background-color: #b02b2b;
+    color: #ffffff;
+    font-size: cv(14);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rv(40);
+    height: rv(21);
+    padding-bottom: rv(2);
+  }
+
+  & .-input,
+  & .-select,
+  & .-textarea {
+    background-color: #d4ebf9;
+    border: none;
+    border-radius: 0;
+    color: #000000;
+    font-size: cv(20);
+    line-height: 1.8;
+    width: 100%;
+    height: rv(70);
+    padding: 0 rv(20);
+  }
+
+  & *::placeholder {
+    color: #aaaaaa;
+  }
+
+  & .-input.-short {
+    width: rv(225);
+  }
+
+  & .-textarea {
+    height: rv(240);
+    padding: rv(15) rv(20);
+  }
+
+  & .-check {
+    background-color: #d4ebf9;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    width: rv(36);
+    height: rv(36);
+  }
+
+  & .-check:checked::after {
+    border-top: rv(5) solid #000000;
+    border-left: rv(5) solid #000000;
+    content: '';
+    position: absolute;
+    top: rv(2);
+    left: rv(10);
+    width: rv(17);
+    height: rv(25);
+    transform: rotate(-135deg);
+  }
+
+  & .-forms {
+    display: flex;
+    width: 100%;
+  }
+
+  & .-agreement {
+    cursor: pointer;
+    display: flex;
+    gap: rv(15);
+    align-items: center;
+    width: auto;
+    margin: rv(30) auto 0;
+  }
+
+  & .-confirm {
+    background-color: #202f55;
+    border-radius: 0;
+    color: #ffffff;
+    font-size: cv(24);
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto rv(-30);
+    padding: 0;
+  }
+
+  & .-back {
+    background-color: #ffffff;
+    border-radius: 0;
+    border: rv(5) solid #202f55;
+    color: #202f55;
+    font-size: cv(24);
+    font-weight: 700;
+    padding: 0;
+  }
+
+  & .-button,
+  & .-submit {
+    background-color: #202f55;
+    border-radius: 0;
+    color: #ffffff;
+    font-size: cv(24);
+    font-weight: 700;
+    padding: 0;
+  }
+
+  & .-button {
+    min-width: rv(160);
+    height: rv(70);
+    margin-left: rv(15);
+  }
+
+  & .-value {
+    font-size: cv(20);
+    line-height: 1.8;
+    white-space: pre-wrap;
+    width: 100%;
+    padding: rv(17) rv(20);
+  }
+
+  &.-disable {
+    max-height: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  &.-error .-input,
+  &.-error .-check,
+  &.-error--current .-input,
+  &.-error--current .-check {
+    background-color: #f9d4eb;
+  }
+
+  &.-error--current .-forms::before {
+    animation: balloon 1s ease-in-out 0s infinite alternate;
+    background-color: #b02b2b;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, calc(50% + rv(10)) 80%, 50% 100%, calc(50% - rv(10)) 80%, 0 80%);
+    color: #ffffff;
+    font-weight: 700;
+    content: attr(data-error);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: rv(-32);
+    left: rv(20);
+    padding: 0 rv(20) rv(10);
+    height: rv(50);
+    z-index: 1;
+  }
+
+  &.-error--current .-agreement.-forms::before {
+    top: rv(-54);
+    left: rv(-58);
+  }
+
+  @keyframes balloon {
+    from {
+      transform: translateY(rv(-10));
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+@include breakpoint(sp) {
+
+  .p-n-contact {
+    & .-label {
+      font-size: cv(18);
+      padding: rv(10) 0;
+      padding-right: rv(15);
+    }
+
+    & .-require {
+      font-size: cv(10);
+      width: rv(30);
+      height: rv(16);
+      padding-bottom: 0;
+    }
+
+    & .-input,
+    & .-select,
+    & .-textarea {
+      font-size: cv(16);
+      line-height: 1.5;
+      height: rv(50);
+      padding: 0 rv(15);
+    }
+
+    & .-textarea {
+      height: rv(190);
+      padding: rv(15);
+    }
+
+    & .-check {
+      width: rv(24);
+      height: rv(24);
+    }
+
+    & .-check:checked::after {
+      border-top-width: rv(2.5);
+      border-left-width: rv(2.5);
+      left: rv(8);
+      width: rv(10);
+      height: rv(16);
+    }
+
+    & .-agreement {
+      gap: rv(10);
+      margin-top: rv(32);
+    }
+
+    & .-button {
+      font-size: cv(16);
+      min-width: rv(105);
+      height: rv(50);
+    }
+  
+    & .-confirm {
+      font-size: cv(16);
+      margin-top: rv(10);
+      margin-bottom: rv(-10);
+    }
+
+    & .-back {
+      border-width: rv(3);
+      font-size: cv(16);
+    }
+
+    & .-submit {
+      font-size: cv(16);
+    }
+
+    & .-value {
+      font-size: cv(16);
+      line-height: 1.5;
+      padding-left: rv(15);
+    }
+
+    &.-error--current .-forms::before {
+      left: 0;
+    }
+
+    &.-error--current .-agreement.-forms::before {
+      top: rv(-48);
+      left: rv(-64);
+    }
+  }
+}

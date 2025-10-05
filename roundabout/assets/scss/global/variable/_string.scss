@@ -1,0 +1,28 @@
+
+// ------------------------
+//   global/variable/string
+// --------------------------------
+
+// Only underscore is allowed in variable names.
+
+$string_base_px: 10;
+
+$string_design_min_px: 16; // Minimum font-size for design
+$string_screen_min_px: 10; // Minimum font-size for screen
+
+$string_h1: 2em;
+$string_h2: 1.5em;
+$string_h3: 1.17em;
+$string_h4: 1em;
+$string_h5: 0.83em;
+$string_h6: 0.67em;
+
+$string_thin:     100;
+$string_exlight:  200;
+$string_light:    300;
+$string_normal:   400;
+$string_medium:   500;
+$string_semibold: 600;
+$string_bold:     700;
+$string_exbold:   800;
+$string_black:    900;

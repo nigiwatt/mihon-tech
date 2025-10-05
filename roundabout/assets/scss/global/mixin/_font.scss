@@ -1,0 +1,28 @@
+
+// ------------------------
+//   global/mixin/font
+// --------------------------------
+
+@use '../function' as *;
+
+// Only underscore is allowed in variable names and function names.
+
+@mixin NotoSansJP(
+  $color, $font_size_px, $line_height:1.5, $letter_spacing:0,
+  $font_weight:400, $white_space:normal
+) {
+  color: $color;
+  font: $font_weight cv($font_size_px) / $line_height "Noto Sans JP",sans-serif;
+  letter-spacing: $letter_spacing * 1em;
+  white-space: $white_space;
+}
+
+@mixin ShareTech(
+  $color, $font_size_px, $line_height:1.5, $letter_spacing:0,
+  $font_weight:400, $white_space:normal
+) {
+  color: $color;
+  font: $font_weight cv($font_size_px) / $line_height "Share Tech","Noto Sans JP",sans-serif;
+  letter-spacing: $letter_spacing * 1em;
+  white-space: $white_space;
+}

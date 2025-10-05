@@ -1,0 +1,39 @@
+
+// ------------------------
+//   global/mixin/breakpoint
+// --------------------------------
+
+@use '../variable' as *;
+
+// Only underscore is allowed in variable names and function names.
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == 'pc' {
+    @media (max-width: (($breakpoint_pc_min_width - 1) + 'px')) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'tb' {
+    @media (max-width: (($breakpoint_tb_min_width - 1) + 'px')) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'sp' {
+    @media (max-width: ($breakpoint_sp_min_width + 'px')) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint_reverse($breakpoint) {
+  @if $breakpoint == 'pc' {
+    @media (min-width: ($breakpoint_tb_min_width + 'px')) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'tb' {
+    @media (min-width: ($breakpoint_sp_min_width + 'px')) {
+      @content;
+    }
+  }
+}

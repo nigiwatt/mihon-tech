@@ -1,0 +1,33 @@
+
+/* ------------------------
+/*   object/utility/string
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+ h1.wp-block-heading { font-size: rv(50)!important; }
+ h2.wp-block-heading { font-size: rv(40)!important; }
+ h3.wp-block-heading { font-size: rv(32)!important; }
+ h4.wp-block-heading { font-size: rv(26)!important; }
+ h5.wp-block-heading { font-size: rv(22)!important; }
+ h6.wp-block-heading { font-size: rv(20)!important; }
+
+@include breakpoint(sp) {
+
+   h1.wp-block-heading { font-size: rv(25)!important; }
+   h2.wp-block-heading { font-size: rv(20)!important; }
+   h3.wp-block-heading { font-size: rv(16)!important; }
+   h4.wp-block-heading { font-size: rv(13)!important; }
+   h5.wp-block-heading { font-size: rv(11)!important; }
+   h6.wp-block-heading { font-size: rv(10)!important; }
+}
+
+ .-thin     { font-weight: $string_thin; }
+ .-exlight  { font-weight: $string_exlight; }
+ .-light    { font-weight: $string_light; }
+ .-normal   { font-weight: $string_normal; }
+ .-medium   { font-weight: $string_medium; }
+ .-semibold { font-weight: $string_semibold; }
+ .-bold     { font-weight: $string_bold; }
+ .-exbold   { font-weight: $string_exbold; }
+ .-black    { font-weight: $string_black; }

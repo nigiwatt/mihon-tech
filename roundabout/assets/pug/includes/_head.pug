@@ -1,0 +1,65 @@
+
+//- head(prefix="og: https://ogp.me/ns#")
+head
+
+  // Metadata 
+  meta(charset="UTF-8")
+  meta(name="description" content=(meta.description || ""))
+  meta(name="format-detection" content="telephone=no, email=no")
+  meta(name="keywords" content=(meta.keywords || ""))
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  // OGP tag 
+  meta(property="og:title" content=(meta.og_title || ""))
+  meta(property="og:type" content=(meta.og_type || "website"))
+  meta(property="og:url" content=(meta.og_url || ""))
+  meta(property="og:image" content=(meta.og_image || "./assets/img/og.jpg"))
+  meta(property="og:site_name" content=(meta.og_site_name || ""))
+  meta(property="og:description" content=(meta.og_description || ""))
+
+  if meta.twitter_card
+    // Twitter 
+    meta(name="twitter:card" content=meta.twitter_card)
+    meta(name="twitter:site" content=(meta.twitter_site || ""))
+
+  if meta.fb_app_id
+    // Facebook 
+    meta(property="fb:app_id" content=meta.fb_app_id)
+    meta(property="fb:admins" content=(meta.fb_admins || ""))
+
+  // Title 
+  title #{meta.title}
+
+  // BaseURL 
+  base(href=(relation || "./"))
+
+  // Favicon 
+  link(rel="icon" type="image/png" href="./assets/img/favicon.ico?ver=1.0")
+  link(rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon.ico?ver=1.0")
+
+  if meta.canonical
+    // Canonical 
+    link(rel="canonical" href=meta.canonical)
+
+  // Preconnect 
+  link(rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous")
+
+  // Preload 
+  each font in fonts
+    link(rel="preload" href!=font as="style")
+  link(rel="preload" href="./assets/css/style.min.css" as="style")
+
+  // StyleSheet 
+  each font in fonts
+    link(rel="stylesheet" href!=font media="print" onload="this.media='all'")
+
+  link(rel="stylesheet" href="./assets/css/style.min.css")
+  if styles
+    each style in styles
+       link(rel="stylesheet" href=style)
+
+  // Script 
+  script(src="./assets/js/common.min.js" defer)
+  if scripts
+    each script in scripts
+         script(src=script defer)

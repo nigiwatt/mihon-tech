@@ -1,0 +1,130 @@
+
+/* ------------------------
+/*   object/project/article
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+.p-n-article {
+  margin-bottom: rv(80);
+
+  & header {
+    border-top: rv(4) solid #000000;
+    padding-bottom: rv(40);
+  }
+
+  & .-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rv(5) rv(30);
+  }
+
+  & h1 {
+    color: #000000;
+    font-size: cv(50);
+    font-weight: 700;
+    width: 100%;
+    margin-top: rv(20);
+    margin-bottom: rv(10);
+  }
+
+  & .-date {
+    color: #999999;
+    font-size: cv(18);
+    display: flex;
+    align-items: center;
+    gap: 0 rv(10);
+  }
+
+  & .-cat {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 rv(10);
+  }
+
+  & .-cat,
+  & .-cat a {
+    color: #999999;
+    font-size: cv(18);
+    text-decoration: none;
+  }
+
+  & .-cat a:hover {
+    text-decoration: underline;
+  }
+
+  & .-cat a:not(:last-child)::after {
+    content: ',';
+  }
+
+  & .-content * {
+    color: #000000;
+    font-size: cv(20);
+    line-height: 1.8;
+  }
+
+  & .-content ul {
+    padding-left: rv(22);
+  }
+
+  & .-clock {
+    width: rv(27);
+  }
+
+  & .-tag {
+    width: rv(27);
+  }
+}
+
+@include breakpoint(sp) {
+
+  .p-n-article {
+    margin-bottom: rv(40);
+
+    & header {
+      padding-bottom: rv(20);
+    }
+
+    & h1 {
+      font-size: cv(25);
+      margin: rv(10) 0;
+    }
+
+    & .-date {
+      font-size: cv(14);
+      align-items: flex-start;
+      padding-left: rv(30);
+    }
+
+    & .-cat {
+      align-items: flex-start;
+      padding-left: rv(30);
+    }
+
+    & .-cat,
+    & .-cat a {
+      font-size: cv(14);
+    }
+
+    & .-content * {
+      font-size: cv(14);
+    }
+
+    & .-content ul {
+      padding-left: rv(18);
+    }
+
+    & .-clock {
+      width: rv(21);
+      position: absolute;
+      left: 0;
+    }
+
+    & .-tag {
+      width: rv(21);
+      position: absolute;
+      left: 0;
+    }
+  }
+}

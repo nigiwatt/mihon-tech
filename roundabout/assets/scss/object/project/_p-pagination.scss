@@ -1,0 +1,106 @@
+
+/* ------------------------
+/*   object/project/pagination
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+.p-n-pagination {
+  display: flex;
+  justify-content: center;
+
+  & .screen-reader-text {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+  }
+
+  & .page-numbers {
+    background-color: #202f55;
+    border: rv(2) solid #202f55;
+    color: #ffffff;
+    font-size: cv(20);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: rv(50);
+    height: rv(50);
+    margin: rv(5);
+    transition: opacity 0.5s;
+  }
+
+  & .page-numbers:not(.dots):not(.current):hover {
+    opacity: 0.7;
+  }
+
+  & .dots {
+    background-color: transparent;
+    border: none;
+    color: #000000;
+  }
+
+  & .prev,
+  & .next {
+    color: #202f55;
+  }
+
+  & .prev::before,
+  & .prev::after,
+  & .next::before,
+  & .next::after {
+    background-color: #ffffff;
+    content: '';
+    position: absolute;
+    top: calc(50% + rv(1));
+    width: rv(15);
+    height: rv(3);
+    transform: rotate(-45deg);
+    transform-origin: left;
+  }
+
+  & .prev::after,
+  & .next::after {
+    top: calc(50% - rv(1));
+    transform: rotate(45deg);
+  }
+
+  & .next {
+    transform: scale(-1, 1);
+  }
+
+  & .current {
+    background-color: #ffffff;
+    border: rv(2) solid #202f55;
+    color: #202f55;
+  }
+}
+
+@include breakpoint(sp) {
+
+  .p-n-pagination {
+    & .page-numbers {
+      font-size: cv(16);
+      width: rv(30);
+      height: rv(30);
+      margin: rv(1);
+    }
+
+    & .prev::before,
+    & .prev::after,
+    & .next::before,
+    & .next::after {
+      top: calc(50% + rv(0.5));
+      width: rv(10);
+      height: rv(2);
+    }
+
+    & .prev::after,
+    & .next::after {
+      top: calc(50% - rv(0.5));
+    }
+  }
+}

@@ -1,0 +1,92 @@
+
+//- +image("index/image.webp")(class="u-n-prefab")
+//- +image("index/image.webp","index/image_sp.webp")(class="u-n-prefab")
+mixin image(_pc=null, _sp=null)
+  if _sp != null
+    +image_picture(_pc, _sp)(class="c-n-image")&attributes(attributes)
+  else
+    if _pc == null || _pc.indexOf("data:image") > -1
+      - var src = _pc
+      - var srcset = null
+      - var { width, height } = { width: null, height: null }
+    else
+      - var src = `./assets/img/${_pc}`
+      if _pc.indexOf(".svg") > -1
+        - var srcset = null
+      else
+        - var srcset = `${src} 1x, ${src.replace(/\.([^/.]+)$/, "@2x.$1")} 2x`
+      - var { width, height } = imageSize(`../img/${_pc}`)
+    img(
+      src=src, srcset=srcset,
+      width=width, height=height,
+      alt=(attributes.alt || "")
+    )&attributes(attributes)
+
+//- +image_figure("index/image.webp")(class="u-n-prefab")
+//- +image_figure("index/image.webp", "index/image_sp.webp")(class="u-n-prefab")
+mixin image_figure(_pc=null, _sp=null)
+  - const attributes_alt = attributes.alt
+  - const attributes_loading = attributes.loading
+  - const attributes_fetchpriority = attributes.fetchpriority
+  - attributes.alt = null
+  - attributes.loading = null
+  - attributes.fetchpriority = null
+  figure.c-n-image&attributes(attributes)
+    if attributes.href
+      +anchor(attributes.href)
+        +image(_pc, _sp)(
+          alt=attributes_alt,
+          loading=attributes_loading,
+          fetchpriority=attributes_fetchpriority
+        )
+    else
+      +image(_pc, _sp)(
+        alt=attributes_alt,
+        loading=attributes_loading,
+        fetchpriority=attributes_fetchpriority
+      )
+    block
+
+mixin image_picture(_pc=null, _sp=null)
+  - const attributes_alt = attributes.alt
+  - const attributes_loading = attributes.loading
+  - const attributes_fetchpriority = attributes.fetchpriority
+  - attributes.alt = null
+  - attributes.loading = null
+  - attributes.fetchpriority = null
+  picture&attributes(attributes)
+    if _pc == null || _pc.indexOf("data:image") > -1
+      - var src = _pc
+      - var srcset = null
+      - var { width, height } = { width: null, height: null }
+    else
+      - var src = `./assets/img/${_pc}`
+      if _pc.indexOf(".svg") > -1
+        - var srcset = src
+      else
+        - var srcset = `${src} 1x, ${src.replace(/\.([^/.]+)$/, "@2x.$1")} 2x`
+      - var { width, height } = imageSize(`../img/${_pc}`)
+    source(
+      media=`(min-width: ${sp_min_width + 1}px)`,
+      srcset=srcset,
+      width=width, height=height
+    )
+
+    if _sp == null || _sp.indexOf("data:image") > -1
+      - var src = _sp
+      - var srcset = null
+      - var { width, height } = { width: null, height: null }
+    else
+      - var src = `./assets/img/${_sp}`
+      if _pc.indexOf(".svg") > -1
+        - var srcset = null
+      else
+        - var srcset = `${src} 1x, ${src.replace(/\.([^/.]+)$/, "@2x.$1")} 2x`
+      - var { width, height } = imageSize(`../img/${_sp}`)
+    img(
+      src=src, srcset=srcset,
+      width=width, height=height,
+      alt=(attributes_alt || "")
+      loading=(attributes_loading || null)
+      fetchpriority=(attributes_fetchpriority || null)
+    )

@@ -1,0 +1,44 @@
+
+// ------------------------
+//   global/mixin/image
+// --------------------------------
+
+@use 'sass:meta';
+@use 'sass:math';
+@use '../function' as *;
+
+// Only underscore is allowed in variable names and function names.
+
+@mixin image($width_px, $height_px:auto) {
+  @if meta.type-of($width_px) == 'number' {
+    @if math.is-unitless($width_px) {
+      width: rv($width_px);
+    } @else {
+      width: $width_px;
+    }
+  } @else {
+    width: $width_px;
+  }
+
+  @if meta.type-of($height_px) == 'number' {
+    @if math.is-unitless($height_px) {
+      height: rv($height_px);
+    } @else {
+      height: $height_px;
+    }
+  } @else {
+    height: $height_px;
+  }
+}
+
+@mixin background($property, $width_px:0, $height_px:0, $horizontal:center, $vertical:top) {
+  @if meta.type-of($property) == 'string' {
+    background: url('../img/' + $property) $horizontal $vertical/if($width_px == 0, cover, rv($width_px)) no-repeat;
+    width: 100%;
+    @if $height_px != 0 {
+      min-height: rv($height_px);
+    }
+  } @else {
+    background-color: $property;
+  }
+}

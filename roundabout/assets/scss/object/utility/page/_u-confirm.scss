@@ -1,0 +1,27 @@
+
+/* ------------------------
+/*   object/utility/page/confirm
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-contact .u-n-contact {
+  &-buttons {
+    display: flex;
+    justify-content: center;
+    gap: rv(30);
+    margin-top: rv(70);
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-contact .u-n-contact {
+    &-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: rv(10);
+      margin-top: rv(35);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+
+// ------------------------
+//   global/mixin/order
+// --------------------------------
+
+@use '../function' as *;
+
+// Only underscore is allowed in variable names and function names.
+
+$order_menu: 10;
+$order_menu_close: 9;
+$order_modal: 8;
+$order_button: 1;
+$order_shape: -1;

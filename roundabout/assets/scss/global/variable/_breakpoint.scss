@@ -1,0 +1,17 @@
+
+// ------------------------
+//   global/variable/breakpoint
+// --------------------------------
+
+// Only underscore is allowed in variable names.
+
+$breakpoint_sp_min_width: 750;
+$breakpoint_tb_min_width: 1080;
+$breakpoint_pc_min_width: 1640;
+$breakpoint_high_min_width: 1920;
+
+$breakpoint_sp_ratio: 2; // SP scaling
+$breakpoint_tb_ratio: 0.8; // TB scaling
+
+$enable_pixel_size: false;
+$zoom_by_high_resolution: false;

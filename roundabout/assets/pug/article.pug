@@ -1,0 +1,69 @@
+
+include /includes/_variables
+include /includes/_prefab
+
+-
+  const styles = [
+    //- "./assets/css/general.min.css",
+  ]
+
+-
+  const scripts = [
+    //- "./assets/js/general.min.js",
+    //- "./assets/js/jquery.min.js",
+    //- "./assets/js/swiper.min.js",
+  ]
+
+doctype html
+html(lang="ja")
+  include /includes/_head
+
+  body
+    //- include /includes/_trace
+    include /_header
+
+    main.-general.-company
+      .l-n-fv
+        .l-n-inner.-wide.js-n-fv
+          .l-n-fv__main.c-n-view
+            h1 お知らせ
+      .l-n-breadcrumb
+        .l-n-inner
+          nav.p-n-breadcrumb(aria-label="パンくずリスト")
+            ol.-list(itemscope, itemtype="https://schema.org/BreadcrumbList")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                +anchor('index.html')(class="-underline", itemprop="item")
+                  span(itemprop="name") トップ
+                meta(itemprop="position", content="1")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                +anchor('news.html')(class="-underline", itemprop="item")
+                  span(itemprop="name") お知らせ
+                meta(itemprop="position", content="2")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                span(itemprop="name") ホームページをリニューアルしました
+                meta(itemprop="position", content="3")
+      .l-n-general
+        .l-n-inner
+          .l-n-general__list
+            article.p-n-article
+              header
+                .-meta
+                  h1 ホームページをリニューアルしました
+                  time(datetime="2025-07-07", class="-date")
+                    +image('common/article_clock.svg')(class="-clock")
+                    | 2025.07.07
+                  .-cat
+                    +image('common/article_tag.svg')(class="-tag")
+                    +anchor("#") お知らせ
+              .-content
+                p 平素より弊社のホームページをご利用いただき、誠にありがとうございます。<br>このたび、弊社のホームページを全面的にリニューアルいたしました。
+                p 新しいホームページでは、
+                ul
+                  li 製品情報をより見やすく整理
+                  li スマートフォンやタブレットからも快適に閲覧可能
+                  li 会社概要や採用情報の更新
+                p など、皆さまにとって使いやすいサイトを目指して改善を行いました。
+                p 今後も内容の充実を図り、より多くの情報をお届けしてまいります。<br>引き続きご愛顧賜りますようお願い申し上げます。
+          +anchor("javascript:history.back()")(class="u-n-general-button c-n-button -opacity") 前の画面に戻る
+
+    include /_footer

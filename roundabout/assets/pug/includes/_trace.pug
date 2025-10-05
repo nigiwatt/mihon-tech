@@ -1,0 +1,207 @@
+
+//- Design trace
+.p-n-trace
+  .l-n-inner
+    +image(
+      `../../trace/${filename}.png`,
+      `../../trace/${filename}_sp.png`
+    )(id="js-n-trace", class="p-n-trace__image -wide")
+    .p-n-trace__panel
+      +input_check01("トレース表示")(id="js-n-check01", class="p-n-trace__check", checked=true)
+      input(type="range", id="js-n-range" value="0.2", min="0", max="1", step="0.1")
+      +input_check01("ドラッグ＆ドロップによる移動")(id="js-n-check02", class="p-n-trace__check")
+      button.p-n-trace__toggle(id="js-n-toggle")
+
+style
+  | html {
+  |   overflow-x: hidden;
+  | }
+  | .p-n-trace {
+  |   position: absolute;
+  |   top: 0;
+  |   left: 0;
+  |   width: 100%;
+  | }
+  | .p-n-trace__image {
+  |   margin: 0 auto;
+  |   opacity: 0.2;
+  |   pointer-events: none;
+  |   position: absolute;
+  |   -webkit-user-select: none;
+  |   z-index: 99;
+  | }
+  | .p-n-trace__panel {
+  |   background-color: rgba(60, 120, 170, 0.8);
+  |   display: flex;
+  |   flex-wrap: wrap;
+  |   align-items: center;
+  |   position: fixed;
+  |   top: 0;
+  |   left: 0;
+  |   width: 100%;
+  |   padding: 5px 10px;
+  |   transition: top 0.5s;
+  |   z-index: 99;
+  | }
+  | .p-n-trace__check {
+  |   align-items: center;
+  |   margin: 3px 0;
+  | }
+  | .p-n-trace__check .-input-form {
+  |   border: none;
+  |   border-radius: 5px;
+  |   min-width: 20px;
+  |   height: 20px;
+  |   margin-top: 0;
+  | }
+  | .p-n-trace__check .-input-form:not(.-radio):checked {
+  |   background-color: #ffffff;
+  | }
+  | .p-n-trace__check .-input-form:not(.-radio)::before {
+  |   border-right: 4px solid #000000;
+  |   border-bottom: 4px solid #000000;
+  |   top: 5%;
+  | }
+  | .p-n-trace__check .-input-label {
+  |   color: #ffffff;
+  |   font-size: 13px;
+  |   margin: 0 10px;
+  | }
+  | .p-n-trace__panel input[type="range"] {
+  |   -webkit-appearance: none;
+  |   -moz-appearance: none;
+  |   appearance: none;
+  |   background-color: #ffffff;
+  |   border-radius: 8px;
+  |   cursor: pointer;
+  |   height: 8px;
+  |   margin-left: 15px;
+  |   margin-right: 25px;
+  | }
+  | .p-n-trace__panel input[type="range"]::-webkit-slider-thumb {
+  |   -webkit-appearance: none;
+  |   -moz-appearance: none;
+  |   appearance: none;
+  |   background-color: #000000;
+  |   border-radius: 100%;
+  |   width: 16px;
+  |   height: 16px;
+  | }
+  | .p-n-trace__toggle {
+  |   background-color: rgba(60, 120, 170, 0.8);
+  |   border: none;
+  |   border-radius: 0 0 5px 5px;
+  |   position: absolute;
+  |   right: 15px;
+  |   bottom: -20px;
+  |   width: 50px;
+  |   height: 20px;
+  | }
+  | .p-n-trace__toggle::before {
+  |   border-top: 1px solid #ffffff;
+  |   border-bottom: 1px solid #ffffff;
+  |   content: '';
+  |   position: absolute;
+  |   top: 8px;
+  |   left: 10px;
+  |   width: 30px;
+  |   height: 5px;
+  | }
+  | @media screen and (max-width: #{sp_min_width + 1}px) {
+  |   .p-n-trace__image {
+  |     width: 100%;
+  |   }
+  |   .p-n-trace__image img {
+  |     width: 100%;
+  |   }
+  | }
+  | @media screen and (min-width: #{sp_min_width}px) {
+  |   .p-n-trace__image img {
+  |     width: calc(#{high_min_width / 10} * var(--rv));
+  |   }
+  | }
+
+script
+  | const panel = document.querySelector('.p-n-trace__panel');
+  | const check01 = document.querySelector('#js-n-check01');
+  | const check02 = document.querySelector('#js-n-check02');
+  | const trace = document.querySelector('#js-n-trace');
+  |
+  | check01.onchange = function() {
+  |     trace.style.display = this.checked ? 'block' : 'none';
+  | }
+  |
+  | document.querySelector('#js-n-range').onchange = function() {
+  |     trace.style.opacity = this.value;
+  | }
+  |
+  | document.querySelector('#js-n-toggle').onclick = function() {
+  |     panel.style.top = panel.style.top == '0px' ? -panel.clientHeight + 'px' : 0;
+  |     document.cookie = 'ToggleOpen=' + (panel.style.top == '0px' ? 'true' : 'false');
+  | }
+  |
+  | window.onresize = function() {
+  |     panel.style.top = panel.style.top == '0px' ? 0 : -panel.clientHeight + 'px';
+  | }
+  |
+  | window.onload = function() {
+  |     const html = document.querySelector('html');
+  |     const img = document.querySelectorAll('figure, a, h1, h2, h3, h4, h5, h6, p');
+  |     var current = basis = null;
+  |
+  |     document.cookie.split(';').forEach((record) => {
+  |         var data = record.split('=');
+  |         if (data[0] == 'ToggleOpen')
+  |             panel.style.top = data[1] === 'true' ? 0 : -panel.clientHeight + 'px';
+  |     });
+  |
+  |     trace.style.display = check01.checked ? 'block' : 'none';
+  |
+  |     img.forEach((e) => {
+  |         e.ondragstart = function(e) {
+  |             if (!check02.checked) return;
+  |             return false;
+  |         }
+  |
+  |         e.onmouseover = function(e) {
+  |             if (!check02.checked) return;
+  |             this.style.outline = 'calc(0.1 * var(--rv)) solid #0000ff';
+  |         }
+  |
+  |         e.onmouseout = function(e) {
+  |             if (!check02.checked) return;
+  |             this.style.outline = '';
+  |         }
+  |
+  |         e.onmousedown = function(e) {
+  |             if (!check02.checked) return;
+  |             current = basis = this;
+  |             while (1) {
+  |                 basis = basis.parentNode;
+  |                 position = window.getComputedStyle(basis).getPropertyValue('position');
+  |                 if (position == 'relative' || basis.tagName == 'BODY') break;
+  |             }
+  |             current.style.position = 'absolute';
+  |             document.addEventListener('mousemove', onMouseMove);
+  |         }
+  |
+  |         document.onmouseup = function(e) {
+  |             if (!check02.checked || !current) return;
+  |             var top = (current.style.top).replace('px', '');
+  |             var left = (current.style.left).replace('px', '');
+  |             current.style.top = 'calc(' + (top / 10).toFixed(2) + ' * var(--rv))';
+  |             current.style.left = 'calc(' + (left / 10).toFixed(2) + ' * var(--rv))';
+  |             document.removeEventListener('mousemove', onMouseMove);
+  |             current = basis = null;
+  |         }
+  |     });
+  |
+  |     var onMouseMove = function(event) {
+  |         var x = event.clientX - basis.getBoundingClientRect().left;
+  |         var y = event.clientY - basis.getBoundingClientRect().top;
+  |         var width = current.offsetWidth;
+  |         var height = current.offsetHeight;
+  |         current.style.top = (y - height / 2) + 'px';
+  |         current.style.left = (x - width / 2) + 'px';
+  |     }
+  | }

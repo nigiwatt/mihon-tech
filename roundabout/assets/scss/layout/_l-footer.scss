@@ -1,0 +1,103 @@
+
+/* ------------------------
+/*   layout/footer
+/* -------------------------------- */
+
+@use '../global' as *;
+
+.-footer .l-n-contact {
+  padding-top: rv(200);
+  padding-bottom: 0;
+  z-index: 1;
+
+  & > div {
+    flex-direction: row;
+  }
+
+  &__left {
+    background-color: #202f55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: rv(600);
+  }
+
+  &__right {
+    background-color: #ffffff;
+    width: 50%;
+    height: rv(600);
+  }
+
+  &__right > a {
+    background-image: url('../img/common/contact_bg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    padding-top: rv(40);
+  }
+
+  &__right img {
+    transition: all 0.3s;
+  }
+
+  &__right:hover img {
+    transform: scale(1.2);
+  }
+}
+
+.-footer .l-n-footer {
+  background-color: #252b29;
+  margin-top: rv(-100);
+  padding-top: rv(200);
+  padding-bottom: 0;
+}
+
+@include breakpoint(sp) {
+
+  .-footer .l-n-contact {
+    padding-top: rv(100);
+    padding-bottom: 0;
+
+    & > div {
+      flex-wrap: wrap;
+    }
+
+    &__left {
+      width: 100%;
+      height: rv(200);
+    }
+
+    &__right {
+      width: 100%;
+      height: rv(300);
+    }
+
+    &__right > a {
+      background-image: url('../img/common/contact_bg_sp.webp');
+      padding-bottom: rv(50);
+    }
+  }
+
+  .-contact + footer.-footer .l-n-contact {
+    &__left {
+      height: rv(200);
+    }
+  }
+
+  .-footer .l-n-footer {
+    padding-top: rv(100);
+    padding-bottom: 0;
+    margin-top: rv(-60);
+
+    small {
+      order: 3;
+    }
+  }
+}

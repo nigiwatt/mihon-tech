@@ -1,0 +1,75 @@
+
+include /includes/_variables
+include /includes/_prefab
+
+-
+  const styles = [
+    //- "./assets/css/contact.min.css",
+  ]
+
+-
+  const scripts = [
+    //- "./assets/js/contact.min.js",
+    //- "./assets/js/jquery.min.js",
+    //- "./assets/js/swiper.min.js",
+  ]
+
+doctype html
+html(lang="ja")
+  include /includes/_head
+
+  body
+    //- include /includes/_trace
+    include /_header
+
+    main.-contact
+      .l-n-fv
+        .l-n-inner.-wide.js-n-fv
+          .l-n-fv__main.c-n-view
+            h1 お問い合わせ
+      .l-n-breadcrumb
+        .l-n-inner
+          nav.p-n-breadcrumb(aria-label="パンくずリスト")
+            ol.-list(itemscope, itemtype="https://schema.org/BreadcrumbList")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                +anchor('index.html')(class="-underline", itemprop="item")
+                  span(itemprop="name") トップ
+                meta(itemprop="position", content="1")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                span(itemprop="name") お問い合わせ
+                meta(itemprop="position", content="2")
+      .l-n-contact
+        .l-n-inner
+          form.l-n-contact__form.l-n-contact__form--confirm(action="thanks.html")
+            .p-n-contact
+              label.-label お問い合わせ種別
+              p.-value 新卒採用に応募したい
+            .p-n-contact
+              label.-label お名前
+              p.-value 見本　一郎
+            .p-n-contact
+              label.-label ふりがな
+              p.-value みほん　いちろう
+            .p-n-contact
+              label.-label 会社名
+              p.-value &nbsp;
+            .p-n-contact
+              label.-label 郵便番号
+              p.-value 1010041
+            .p-n-contact
+              label.-label 住所
+              p.-value 東京都千代田区神田須田町１丁目７番８号　VORT秋葉原IV　2F
+            .p-n-contact
+              label.-label メールアドレス
+              p.-value contact.mihon-tech@example.com
+            .p-n-contact
+              label.-label 電話番号
+              p.-value 03-1234-XXXX
+            .p-n-contact
+              label.-label ご質問等あればご記入ください
+              p.-value テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。テキ
+            span.u-n-contact-buttons.p-n-contact
+              input.-back.c-n-button.-opacity(type="button" value="戻る" onclick="javascript:history.back()")
+              input.-submit.c-n-button.-opacity(type="submit" value="送信")
+
+    include /_footer

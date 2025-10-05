@@ -1,0 +1,87 @@
+
+header.-header.js-n-header
+  .l-n-header
+    .l-n-inner.-wide
+      .l-n-header__left
+        +anchor("index.html")(class="p-n-header-logo -opacity")
+          +image("common/header_logo.svg")(alt="Mihon Tech", class="u-n-header-logo", fetchpriority="high")
+      .l-n-header__center
+        ul.p-n-header-menu
+          li(class=(filename == 'index' ? 'current-menu-item' : ''))
+              +anchor("index.html") トップ
+          li(class=(filename == 'company' ? 'current-menu-item' : ''))
+            +anchor("company.html") 会社概要
+          li(class=(filename == 'products' ? 'current-menu-item' : ''))
+            +anchor("products.html") 製品紹介
+          li(class=(filename == 'recruit' ? 'current-menu-item' : ''))
+            +anchor("recruit.html") 採用情報
+      .l-n-header__right
+        +anchor("contact.html")(class="p-n-header-tel -opacity")
+          +image_figure("common/header_tel.svg")(alt="電話", class="u-n-header-tel", fetchpriority="high")
+            figcaption.u-n-header-tel-label お問い合わせ
+        .p-n-menu.p-n-menu--header
+          +menu_noresponsive01("bottom")(class="u-n-prefab")
+            .l-n-inner.-inner
+              .-left
+                +anchor("index.html")(class="-link -opacity")
+                  +image("common/header_logo.svg")(alt="Mihon Tech", class="-logo", fetchpriority="high")
+                  h2.-title ミホン・テック株式会社
+                ul.p-n-common-menu-top
+                  li
+                    +anchor("index.html") トップ
+                  li &nbsp;
+                  li
+                    +anchor("index.html#about") 当社について
+                  li
+                    +anchor("index.html#products") 製品紹介
+                  li
+                    +anchor("index.html#feature") 当社が目指すこと
+                  li
+                    +anchor("news.html") お知らせ一覧
+                .-sns
+                  +anchor("https://x.com/nigiwatt/")(class="-opacity")
+                    +image("common/header_sns01.svg")(alt="X", class="-sns01", loading="lazy")
+                  +anchor("https://www.facebook.com/nigiwatt/")(class="-opacity")
+                    +image("common/header_sns02.svg")(alt="Facebook", class="-sns02", loading="lazy")
+              .-right
+                ul.p-n-common-menu.p-n-common-menu--header
+                  li
+                    +anchor("company.html") 会社概要
+                    ul.sub-menu
+                      li
+                        +anchor("company.html#greeting") 代表ごあいさつ
+                      li
+                        +anchor("company.html#company") 会社情報
+                      li
+                        +anchor("company.html#sustainable") 社会貢献活動
+                      li
+                        +anchor("company.html#news") お知らせ
+                      li
+                        +anchor("company.html#history") 沿革
+                  li
+                    +anchor("products.html") 製品紹介
+                    ul.sub-menu
+                      li
+                        +anchor("products.html#electronic") 電子部品
+                      li
+                        +anchor("products.html#screws") ネジ類
+                      li
+                        +anchor("products.html#springs") バネ類
+                      li
+                        +anchor("products.html#gears") ギア類
+                      li
+                        +anchor("products.html#medical") 医療機器
+                      li
+                        +anchor("products.html#industrial") 工業用機器
+                  li.-head
+                    +anchor("recruit.html") 採用情報
+                    ul.sub-menu
+                      li
+                        +anchor("recruit.html#entry") 新卒採用
+                      li
+                        +anchor("recruit.html#career") キャリア採用
+                  li.-head
+                    +anchor("contact.html") お問い合わせ
+                    ul.sub-menu
+                      li
+                        +anchor("privacy.html") 個人情報保護方針

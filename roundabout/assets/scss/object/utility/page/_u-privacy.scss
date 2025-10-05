@@ -1,0 +1,43 @@
+
+/* ------------------------
+/*   object/utility/page/privacy
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-privacy .u-n-privacy {
+  &-title {
+    color: #202f55;
+    font-size: cv(32);
+    font-weight: 700;
+    line-height: 1.13;
+    margin-top: rv(50);
+    margin-bottom: rv(22);
+  }
+
+  &-text {
+    color: #000000;
+    font-size: cv(20);
+    line-height: 1.8;
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-privacy .u-n-privacy {
+    &-title {
+      font-size: cv(24);
+      line-height: 1.5;
+      margin-bottom: rv(15);
+    }
+
+    &-title:nth-of-type(1) {
+      margin-top: rv(20);
+    }
+
+    &-text {
+      font-size: cv(16);
+      line-height: 1.85;
+    }
+  }
+}

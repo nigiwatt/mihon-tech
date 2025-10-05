@@ -1,0 +1,155 @@
+
+include /includes/_variables
+include /includes/_prefab
+
+-
+  const styles = [
+    //- "./assets/css/index.min.css",
+  ]
+
+-
+  const scripts = [
+    //- "./assets/js/index.min.js",
+    //- "./assets/js/jquery.min.js",
+    "./assets/js/swiper.min.js",
+  ]
+
+doctype html
+html(lang="ja")
+  include /includes/_head
+
+  body
+    //- include /includes/_trace
+    include /_header
+
+    main.-index
+      .l-n-fv.js-n-fv
+        .l-n-inner.-wide
+          +swiper01("defer")(
+            class="u-n-prefab l-n-fv__swiper",
+            data-width="1920,375",
+            data-margin="0,0",
+            data-options="notAllowTouchMove | fade",
+            data-delay="4000",
+            data-speed="2000"
+          )
+            .swiper-slide
+              +image("index/fv_slide01.webp","index/fv_slide01_sp.webp")(alt="スライド", class="u-n-fv-slide", fetchpriority="high")
+            .swiper-slide
+              +image("index/fv_slide02.webp","index/fv_slide02_sp.webp")(alt="スライド", class="u-n-fv-slide", fetchpriority="high")
+            .swiper-slide
+              +image("index/fv_slide03.webp","index/fv_slide03_sp.webp")(alt="スライド", class="u-n-fv-slide", fetchpriority="high")
+          .l-n-fv__foreground
+            .u-n-fv-decoration
+            .p-n-index-head
+              h2.u-n-fv-title 精度で､応える
+              p.u-n-fv-text.c-n-ShareTech Precision is Our Answer
+            +anchor("#")(class="p-n-index-news")
+              .-headline
+                +image("index/fv_icon.svg")(alt="", class="u-n-fv-icon", fetchpriority="high")
+                time.u-n-fv-news-date.c-n-ShareTech(datetime="2025-07-07") 2025.07.07
+                h2.u-n-fv-news-title ホームページをリニューアルしました。
+              .-arrow.c-n-button-arrow
+                span
+      #about.l-n-about
+        .u-n-about-bg.l-n-inner.is-n-hide
+          .l-n-about__main
+            span.u-n-about-en.c-n-en.c-n-ShareTech About us
+            h2.u-n-about-title 電子機器製造の高度な要求を<br>技術と経験で支える
+            p.u-n-about-text さまざまな機器が高度に微細化する中、電子機器製造にはこれまで以上の精度とクオリティが求められています。当社は、これまで培ってきた高精度なものづくりの技術と経験を活かし、確かなクオリティ、安心・安全をお届けするとともに、お客様の期待を超える価値を創造してまいります。
+            button.p-n-index-button.c-n-button(data-href="company.html")
+              span 会社概要
+              span.-arrow.c-n-button-arrow
+                span
+          +swiper01("defer")(
+            class="u-n-prefab l-n-about__swiper",
+            data-width="1920,375",
+            data-margin="0,0",
+            data-options="notAllowTouchMove | cube",
+            data-delay="3000",
+            data-speed="1000"
+          )
+            .swiper-slide
+              +image("index/about_slide01.webp","index/about_slide01_sp.webp")(alt="スライド", class="u-n-about-slide", fetchpriority="high")
+            .swiper-slide
+              +image("index/about_slide02.webp","index/about_slide02_sp.webp")(alt="スライド", class="u-n-about-slide", fetchpriority="high")
+            .swiper-slide
+              +image("index/about_slide03.webp","index/about_slide03_sp.webp")(alt="スライド", class="u-n-about-slide", fetchpriority="high")
+            .swiper-slide
+              +image("index/about_slide04.webp","index/about_slide04_sp.webp")(alt="スライド", class="u-n-about-slide", fetchpriority="high")
+      #products.l-n-products
+        .l-n-inner
+          span.u-n-products-en.c-n-en.c-n-ShareTech Products
+          h2.u-n-products-title 製品紹介
+          .l-n-products__card
+            +anchor("products.html#electronic")(class="p-n-index-card is-n-hide -fade-in-up")
+              +image("index/products_thumb01.webp","index/products_thumb01_sp.webp")(alt="サムネイル", class="u-n-products-thumb", loading="lazy")
+              span.u-n-products-card-en.c-n-ShareTech Electronic Components
+              h3.u-n-products-card-title 電子部品
+              span.p-n-index-card-button
+                span 詳細を見る
+                span.-arrow.c-n-button-arrow
+                  span
+            +anchor("products.html#screws")(class="p-n-index-card is-n-hide -fade-chain01 -fade-delay01 -fade-in-up")
+              +image("index/products_thumb02.webp","index/products_thumb02_sp.webp")(alt="サムネイル", class="u-n-products-thumb", loading="lazy")
+              span.u-n-products-card-en.c-n-ShareTech Screws
+              h3.u-n-products-card-title ネジ類
+              span.p-n-index-card-button
+                span 詳細を見る
+                span.-arrow.c-n-button-arrow
+                  span
+            +anchor("products.html#springs")(class="p-n-index-card is-n-hide -fade-chain01 -fade-delay02 -fade-in-up")
+              +image("index/products_thumb03.webp","index/products_thumb03_sp.webp")(alt="サムネイル", class="u-n-products-thumb", loading="lazy")
+              span.u-n-products-card-en.c-n-ShareTech Springs
+              h3.u-n-products-card-title バネ類
+              span.p-n-index-card-button
+                span 詳細を見る
+                span.-arrow.c-n-button-arrow
+                  span
+            +anchor("products.html#gears")(class="p-n-index-card is-n-hide -fade-chain01 -fade-delay03 -fade-in-up")
+              +image("index/products_thumb04.webp","index/products_thumb04_sp.webp")(alt="サムネイル", class="u-n-products-thumb", loading="lazy")
+              span.u-n-products-card-en.c-n-ShareTech Gears
+              h3.u-n-products-card-title ギア類
+              span.p-n-index-card-button
+                span 詳細を見る
+                span.-arrow.c-n-button-arrow
+                  span
+            +anchor("products.html#medical")(class="p-n-index-card is-n-hide -fade-chain01 -fade-delay04 -fade-in-up")
+              +image("index/products_thumb05.webp","index/products_thumb05_sp.webp")(alt="サムネイル", class="u-n-products-thumb", loading="lazy")
+              span.u-n-products-card-en.c-n-ShareTech Medical Device
+              h3.u-n-products-card-title 医療機器
+              span.p-n-index-card-button
+                span 詳細を見る
+                span.-arrow.c-n-button-arrow
+                  span
+            +anchor("products.html#industrial")(class="p-n-index-card is-n-hide -fade-chain01 -fade-delay05 -fade-in-up")
+              +image("index/products_thumb06.webp","index/products_thumb06_sp.webp")(alt="サムネイル", class="u-n-products-thumb", loading="lazy")
+              span.u-n-products-card-en.c-n-ShareTech Industrial Device
+              h3.u-n-products-card-title 工業用機械
+              span.p-n-index-card-button
+                span 詳細を見る
+                span.-arrow.c-n-button-arrow
+                  span
+      #feature.u-n-feature-bg.l-n-feature
+        .l-n-inner
+          .l-n-feature__main
+            span.u-n-feature-en.c-n-en.c-n-ShareTech Feature
+            h2.u-n-feature-title 技術を､世界へ
+            p.u-n-feature-text 私たちが輸出するのは、単なる製品やサービスではありません。<br>それは、エンジニアが磨き続けてきた高度な技術力そのものです。私たちは世界に挑み、グローバルな社会が抱える困難を乗り越えることで、持続可能な社会の実現に貢献し、技術の革新を成し遂げ、価値ある社会を支え続けます。
+            button.p-n-index-button.c-n-button(data-href="company.html#sustainable")
+              span 社会貢献活動
+              span.-arrow.c-n-button-arrow
+                span
+          .l-n-feature__images
+            +image("index/feature_picture01.webp","index/feature_picture01_sp.webp")(alt="人物写真", class="u-n-feature-picture01 is-n-hide -fade-rotate-y", loading="lazy")
+            +image("index/feature_picture02.webp","index/feature_picture02_sp.webp")(alt="人物写真", class="u-n-feature-picture02 is-n-hide -fade-rotate-y -fade-delay01", loading="lazy")
+            +image("index/feature_picture03.webp","index/feature_picture03_sp.webp")(alt="人物写真", class="u-n-feature-picture03 is-n-hide -fade-rotate-y -fade-delay02", loading="lazy")
+      #recruit.l-n-recruit.-opacity
+        .l-n-inner.-wide
+          +anchor("recruit.html")(class="l-n-recruit__link")
+            .p-n-index-recruit
+              span.u-n-recruit-en.c-n-en.c-n-ShareTech Recruit
+              h2.u-n-recruit-title 採用情報
+              +image("index/recruit_arrow.svg")(alt="", class="u-n-recruit-arrow", loading="lazy")
+
+    include /_footer

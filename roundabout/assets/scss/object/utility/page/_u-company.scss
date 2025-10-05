@@ -1,0 +1,266 @@
+
+/* ------------------------
+/*   object/utility/page/company
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-company .u-n-fv {
+  &-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.-company .u-n-greeting {
+  &-title {
+    color: #202f55;
+    font-size: cv(50);
+    font-weight: 700;
+    margin-bottom: rv(60);
+  }
+
+  &-text {
+    font-size: cv(20);
+    letter-spacing: 0.04em;
+    line-height: 2;
+    margin-bottom: rv(40);
+  }
+
+  &-name {
+    width: rv(170);
+  }
+
+  &-image {
+    width: rv(500);
+  }
+
+  &-image::after {
+    background-color: #d4ebf9;
+    content: '';
+    position: absolute;
+    left: rv(-30);
+    bottom: rv(-30);
+    width: rv(220);
+    height: rv(220);
+    z-index: -1;
+  }
+}
+
+.-company .u-n-separate {
+  &-image {
+    width: 100%;
+    height: rv(320);
+    overflow: hidden;
+  }
+
+  &-image img {
+    position: relative;
+    object-fit: contain;
+  }
+}
+
+.-company .u-n-company {
+  &-title {
+    color: #202f55;
+    font-size: cv(50);
+    font-weight: 700;
+  }
+
+  &-en {
+    color: #d4ebf9;
+    font-size: cv(120);
+    line-height: 1.25;
+    position: absolute;
+    top: rv(-50);
+    left: rv(260);
+  }
+}
+
+.-company .u-n-sustainable {
+  &-title {
+    color: #ffffff;
+    font-size: cv(50);
+    font-weight: 700;
+    margin-bottom: rv(80);
+  }
+
+  &-title::after {
+    border-color: #ffffff;
+    right: 0;
+    margin: auto;
+  }
+
+  &-text {
+    color: #ffffff;
+    font-size: cv(24);
+    letter-spacing: 0.04em;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: rv(70);
+  }
+
+  &-slide {
+    min-width: rv(480);
+    width: 25vw;
+  }
+}
+
+.-company .u-n-history {
+  &-title {
+    color: #202f55;
+    font-size: cv(50);
+    font-weight: 700;
+  }
+
+  &-en {
+    color: #d4ebf9;
+    font-size: cv(120);
+    line-height: 1.25;
+    position: absolute;
+    top: rv(-50);
+    left: rv(160);
+  }
+
+  &-image {
+    width: rv(450);
+  }
+}
+
+.-company .u-n-news {
+  &-title {
+    color: #202f55;
+    font-size: cv(50);
+    font-weight: 700;
+  }
+
+  &-en {
+    color: #d4ebf9;
+    font-size: cv(120);
+    line-height: 1.25;
+    position: absolute;
+    top: rv(-50);
+    left: rv(260);
+  }
+
+  &-button {
+    background-color: #202f55;
+    color: #ffffff;
+    font-size: cv(24);
+    font-weight: 700;
+    margin: rv(80) auto 0;
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-company .u-n-fv {
+    &-list {
+      font-size: cv(18);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .-company .u-n-greeting {
+    &-title {
+      font-size: cv(24);
+      width: rv(280);
+      margin: 0 auto;
+      margin-bottom: rv(35);
+    }
+
+    &-text {
+      font-size: cv(14);
+      line-height: 1.71;
+      margin-bottom: rv(10);
+    }
+
+    &-name {
+      width: rv(102);
+    }
+
+    &-image {
+      width: rv(250);
+      margin: 0 rv(47.5) rv(40);
+    }
+
+    &-image::after {
+      left: rv(-15);
+      bottom: rv(-15);
+      width: rv(110);
+      height: rv(110);
+    }
+  }
+
+  .-company .u-n-separate {
+    &-image {
+      width: rv(375);
+      height: rv(240);
+    }
+  }
+
+  .-company .u-n-company {
+    &-title {
+      font-size: cv(25);
+      line-height: 1.52;
+    }
+
+    &-en {
+      font-size: cv(60);
+      line-height: 1.5;
+      top: rv(-90);
+      left: rv(130);
+    }
+  }
+
+  .-company .u-n-sustainable {
+    &-title {
+      font-size: cv(24);
+      margin-bottom: rv(45);
+    }
+
+    &-text {
+      font-size: cv(14);
+      line-height: 1.71;
+      margin-bottom: rv(40);
+    }
+
+    &-slide {
+      min-width: rv(240);
+    }
+  }
+
+  .-company .u-n-history {
+    &-title {
+      font-size: cv(24);
+    }
+
+    &-en {
+      font-size: cv(60);
+      line-height: 1.5;
+      top: rv(-70);
+      left: rv(175);
+    }
+
+    &-image {
+      width: rv(225);
+    }
+  }
+
+  .-company .u-n-news {
+    &-title {
+      font-size: cv(24);
+    }
+
+    &-en {
+      font-size: cv(60);
+      line-height: 1.5;
+      top: rv(-65);
+      left: rv(220);
+    }
+
+    &-button {
+      font-size: cv(14);
+      margin-top: rv(40);
+    }
+  }
+}

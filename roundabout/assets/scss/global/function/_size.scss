@@ -1,0 +1,40 @@
+
+// ------------------------
+//   global/function/size
+// --------------------------------
+
+@use 'sass:math';
+@use 'sass:string';
+@use '../variable' as *;
+
+// Only underscore is allowed in variable names and function names.
+
+@function rem($pixels) {
+  @return divide($pixels, $string_base_px) * 1rem;
+}
+
+@function em($pixels, $base_px) {
+  @return divide($pixels, $base_px) * 1em;
+}
+
+@function rv($pixels) {
+  @return string.unquote('calc(' + divide($pixels, $string_base_px) + ' * var(--rv))');
+  // @return string.unquote($pixels + 'px');
+}
+
+@function cv($pixels) {
+  @return string.unquote('calc(' + divide($pixels, $string_base_px) + ' * var(--cv))');
+  // @return string.unquote($pixels + 'px');
+}
+
+@function divide($left, $right) {
+  @return math.div($left, $right);
+}
+
+@function percentage($left, $right) {
+  @return string.unquote(divide(floor(divide($left, $right) * 10000), 100) + '%');
+}
+
+@function vw($target, $screen) {
+  @return string.unquote(divide(floor(divide($target, $screen) * 10000), 100) + 'vw');
+}

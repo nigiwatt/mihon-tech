@@ -1,0 +1,527 @@
+
+include /includes/_variables
+include /includes/_prefab
+
+-
+  const styles = [
+    //- "./assets/css/gallery.css",
+  ]
+
+-
+  const scripts = [
+    //- "./assets/js/gallery.js",
+    //- "./assets/js/jquery.js",
+    "./assets/js/swiper.js",
+  ]
+
+- const img_base64 = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiPgogIDxyZWN0IGlkPSJSZWN0YW5nbGUiIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiIGZpbGw9IiNkZGQiLz4KPC9zdmc+Cg=="
+
+doctype html
+html(lang="ja")
+  include /includes/_head
+
+  body
+    style
+      | .-gallery {
+      |   display: grid;
+      |   grid-template-columns: repeat(1, 1fr);
+      |   gap: 10px;
+      |   padding: 20px;
+      | }
+      | .l-n-gallery {
+      |   border: 1px solid #cccccc;
+      |   border-radius: 5px;
+      |   width: 100%;
+      |   overflow: hidden;
+      | }
+      | .-frame-title {
+      |   background-color: #aabbdd;
+      |   font-family: Arial;
+      |   font-weight: 700;
+      |   padding: 10px 15px;
+      | }
+      | .-frame-body {
+      |   padding: 15px;
+      | }
+      | [class^="c-n-button"].u-n-prefab {
+      |   width: 200px;
+      | }
+      | .c-n-button02.u-n-prefab {
+      |   width: auto;
+      | }
+      | [class^="p-n-menu"].u-n-prefab {
+      |   position: relative;
+      | }
+      | [class^="p-n-menu"] .-menu-content ul {
+      |   min-height: 60px;
+      | }
+      | [class^="p-n-menu"]:has(.-input-form:checked) .-menu-content ul {
+      |   border: none;
+      |   display: flex;
+      |   flex-direction: column;
+      | }
+      | [class^="p-n-menu"]:has(.-input-form:checked) .-menu-content li {
+      |   border: none;
+      |   font-size: 1.5em;
+      |   min-height: 60px;
+      | }
+      | [class^="p-n-menu"]:has(.-input-form:checked) {
+      |   position: fixed;
+      | }
+      | .u-n-left {
+      |   background-color: #678db0;
+      |   border-radius: 5px;
+      |   color: #fff;
+      |   font-weight: 700;
+      |   text-align: center;
+      |   margin-right: 5px;
+      |   padding: 15px 0;
+      | }
+      | .u-n-right {
+      |   background-color: #e46b71;
+      |   border-radius: 5px;
+      |   color: #fff;
+      |   font-weight: 700;
+      |   text-align: center;
+      |   margin-left: 5px;
+      |   padding: 15px 0;
+      | }
+
+    main.-gallery
+      .l-n-gallery
+        .-frame-title arrow01
+        .-frame-body
+          +arrow01("left")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title button01
+        .-frame-body
+          +button01("/")(class="u-n-prefab") Button
+
+      .l-n-gallery
+        .-frame-title button02
+        .-frame-body
+          +button02()(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title button_fill01
+        .-frame-body
+          +button_fill01("/")(class="u-n-prefab") Button
+
+      .l-n-gallery
+        .-frame-title button_number01
+        .-frame-body
+          +button_number01("/", "1")(class="u-n-prefab") Button
+
+      .l-n-gallery
+        .-frame-title header01
+        .-frame-body
+          +header01("h2")(class="u-n-prefab") Header
+
+      .l-n-gallery
+        .-frame-title input_text01
+        .-frame-body
+          +input_text01("placeholder")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title input_check01
+        .-frame-body
+          +input_check01("check1", "name[]")(class="u-n-prefab", checked=true)
+          +input_check01("check2", "name[]")(class="u-n-prefab")
+          +input_check01("check3", "name[]")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title input_radio01
+        .-frame-body
+          +input_radio01("check1", "name[]")(class="u-n-prefab", checked=true)
+          +input_radio01("check2", "name[]")(class="u-n-prefab")
+          +input_radio01("check3", "name[]")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title input_menu01
+        .-frame-body
+          +input_menu01("open", "close")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title input_select01
+        .-frame-body
+          +input_select01([
+            {
+              text: "label1",
+              attr: { value: "value1", selected: true }
+            },
+            {
+              text: "label2",
+              attr: { disabled: true }
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title input_textarea01
+        .-frame-body
+          +input_textarea01("placeholder")(class="u-n-prefab")
+            | Text block
+
+      .l-n-gallery
+        .-frame-title input_submit01
+        .-frame-body
+          +input_submit01("submit")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title input_button01
+        .-frame-body
+          +input_button01("button", "history.back()")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title line01
+        .-frame-body
+          +line01()(class="u-n-prefab")
+          +line01("double")(class="u-n-prefab")
+          +line01("dash")(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title list_both01
+        .-frame-body
+          +list_both01([
+            {
+              term: "Term text",
+              data: "Data text"
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title list_horizontal01
+        .-frame-body
+          +list_horizontal01([
+            {
+              href: "#",
+              text: "Text1"
+            },
+            {
+              href: "#",
+              text: "Text2"
+            },
+            {
+              href: "#",
+              text: "Text3"
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title list_tag01
+        .-frame-body
+          +list_tag01([
+            {
+              label: "Tag1",
+              href: "#",
+              color: "red"
+            },
+            {
+              label: "Tag2",
+              href: "#",
+              color: "green"
+            },
+            {
+              label: "Tag3",
+              href: "#",
+              color: "blue"
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title tab01
+        .-frame-body
+          +tab01([
+            {
+              label: "Tab1",
+              href: "#",
+              active: true
+            },
+            {
+              label: "Tab2",
+              href: "#"
+            },
+            {
+              label: "Tab3",
+              href: "#"
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title both01
+        .-frame-body
+          +both01("u-n-left", "u-n-right")
+            mixin both_left
+              p 左側のテキスト
+            mixin both_right
+              p 右側のテキスト
+
+      .l-n-gallery
+        .-frame-title accordion01
+        .-frame-body
+          +accordion01([
+            {
+              open: true,
+              qicon: "Q",
+              qtext: "Insert question text here.",
+              aicon: "A",
+              atext: "Insert answer text here. It's possible to insert HTML tags, images, etc."
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title card01
+        .-frame-body
+          +card01([
+            {
+              image: img_base64,
+              text: "Card with an image and text. Card width automatically adjusted by grid."
+            },
+            {
+              image: img_base64,
+              text: "Card with an image and text. Card width automatically adjusted by grid."
+            },
+            {
+              image: img_base64,
+              text: "Card with an image and text. Card width automatically adjusted by grid."
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title contact01
+        .-frame-body
+          +contact01([
+            {
+              label: "Name",
+              required: "*",
+              text: "Placeholder",
+              attr: { value: "John Lennon" }
+            },
+            {
+              label: "Job",
+              required: "*",
+              name: "check[]",
+              check: [
+                { label: "Construction" },
+                { label: "Food" },
+                { label: "Information Technology" },
+                { label: "Service" },
+                { label: "Other" }
+              ]
+            },
+            {
+              label: "Sex",
+              required: "*",
+              name: "radio[]",
+              radio: [
+                {
+                  label: "Male",
+                  attr: { checked: true }
+                },
+                { label: "Female" }
+              ]
+            },
+            {
+              label: "Type",
+              required: "*",
+              select: [
+                {
+                  text: "label1",
+                  attr: { value: "value1", selected: true }
+                },
+                {
+                  text: "label2",
+                  attr: { disabled: true }
+                }
+              ]
+            },
+            {
+              label: "Content",
+              required: "*",
+              textarea: "Placeholder",
+              contents: "Enter inquiry content here",
+              note: "Maximum number of characters 3000"
+            },
+            {
+              label: "I agree to privacy policy and submit",
+              agree: true,
+              attr: { required: "required" }
+            },
+            {
+              label: "Submit",
+              submit: true
+            },
+            {
+              label: "Cancel",
+              button: true,
+              attr: { onclick: "location.href('index.html')" }
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title contact_confirm01
+        .-frame-body
+          +contact_confirm01([
+            {
+              label: "Name",
+              required: "Required",
+              text: "John Lennon"
+            },
+            {
+              label: "Job",
+              required: "Required",
+              text: "Information Technology, Other"
+            },
+            {
+              label: "Age",
+              required: "Required",
+              text: "Male"
+            },
+            {
+              label: "Type",
+              required: "Required",
+              text: "label1"
+            },
+            {
+              label: "Content",
+              required: "Required",
+              text: "Enter inquiry content here"
+            },
+            {
+              label: "Submit",
+              submit: true
+            },
+            {
+              label: "Back",
+              button: true,
+              attr: { onclick: "history.back()" }
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title menu01
+        .-frame-body
+          +menu01("left")(class="u-n-prefab")
+            +list_horizontal01([
+              {
+                href: "#",
+                text: "Text1"
+              },
+              {
+                href: "#",
+                text: "Text2"
+              },
+              {
+                href: "#",
+                text: "Text3"
+              }
+            ])
+
+      .l-n-gallery
+        .-frame-title menu_noresponsive01
+        .-frame-body
+          +menu_noresponsive01("left")(class="u-n-prefab")
+            +list_horizontal01([
+              {
+                href: "#",
+                text: "Text1"
+              },
+              {
+                href: "#",
+                text: "Text2"
+              },
+              {
+                href: "#",
+                text: "Text3"
+              }
+            ])
+
+      .l-n-gallery
+        .-frame-title modal01
+        .-frame-body
+          +modal01([
+            {
+              image: img_base64,
+              title: "Product title",
+              price: "¥9,200",
+              text: "This is a product introduction. Click to display modal dialog."
+            },
+            {
+              image: img_base64,
+              title: "Product title",
+              price: "¥9,300",
+              text: "This is a product introduction. Click to display modal dialog."
+            },
+            {
+              image: img_base64,
+              title: "Product title",
+              price: "¥9,400",
+              text: "This is a product introduction. Click to display modal dialog."
+            },
+            {
+              image: img_base64,
+              title: "Product title",
+              price: "¥9,500",
+              text: "This is a product introduction. Click to display modal dialog."
+            },
+            {
+              image: img_base64,
+              title: "Product title",
+              price: "¥9,600",
+              text: "This is a product introduction. Click to display modal dialog."
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title news01
+        .-frame-body
+          +news01([
+            {
+              href: "#",
+              category: "Event",
+              color: "red",
+              date_attr: "2025-03-21",
+              date_text: "2025/03/12",
+              title: "Asset management seminar to be held"
+            },
+            {
+              href: "#",
+              category: "News",
+              color: "green",
+              date_attr: "2025-03-20",
+              date_text: "2025/03/20",
+              title: "Notice regarding the 8th General Meeting of Shareholders"
+            },
+            {
+              href: "#",
+              category: "Products",
+              color: "blue",
+              date_attr: "2025-03-19",
+              date_text: "2025/03/19",
+              title: "Added new financial products"
+            }
+          ])(class="u-n-prefab")
+
+      .l-n-gallery
+        .-frame-title swiper01
+        .-frame-body
+          +swiper01("button", "pagination", "")(
+            class="u-n-prefab",
+            data-width="640,375",
+            data-margin="30,6",
+            data-options="pauseOnMouseEnter",
+            data-delay="3000",
+            data-speed="1000"
+          )
+            .swiper-slide
+              +image(img_base64)
+            .swiper-slide
+              +image(img_base64)
+            .swiper-slide
+              +image(img_base64)
+            .swiper-slide
+              +image(img_base64)
+            .swiper-slide
+              +image(img_base64)
+            .swiper-slide
+              +image(img_base64)

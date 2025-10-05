@@ -1,0 +1,59 @@
+
+/* ------------------------
+/*   object/utility/header
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+.-header .u-n-header {
+  &-logo {
+    width: rv(100);
+    transition: 0.3s;
+  }
+
+  &-tel-label {
+    color: #ffffff;
+    font-size: cv(16);
+    font-weight: 700;
+    bottom: rv(-10);
+    transition: all 0.3s;
+  }
+
+  &-tel img {
+    width: rv(48);
+    transition: all 0.3s;
+  }
+}
+
+.-slim .u-n-header {
+  &-logo {
+    width: rv(64);
+  }
+
+  &-tel-label {
+    font-size: cv(12);
+    bottom: rv(-4);
+  }
+
+  &-tel img {
+    width: rv(32);
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-header .u-n-header {
+    &-logo {
+      width: rv(50);
+    }
+
+    &-tel-label {
+      font-size: cv(10);
+      bottom: rv(-4);
+    }
+
+    &-tel img {
+      width: rv(24);
+    }
+  }
+}

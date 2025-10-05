@@ -1,0 +1,10 @@
+
+//- +menu01("left")(class="u-n-prefab")
+mixin menu01(_direction="left")
+  dialog.p-n-menu01(class=`-menu-${_direction}`)&attributes(attributes)
+    +input_menu01("Menu", "Close")(class="-menu-check", id="js-n-opener", aria-label="メニューを開く")
+    .-menu-modal.js-n-menu
+      label.-menu-blind(for="js-n-opener")
+      .-menu-frame
+        nav.-menu-content
+          block

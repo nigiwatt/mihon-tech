@@ -1,0 +1,17 @@
+
+// ------------------------
+//   global/variable/fade
+// --------------------------------
+
+@use 'sass:list';
+
+// Only underscore is allowed in variable names.
+
+$fade_transition_delay: ();
+@for $i from 1 through 10 {
+  $fade_transition_delay: list.append($fade_transition_delay, 0.25 * $i);
+}
+
+$fade_transition: 0.5;
+$fade_transition_opacity: 0.5;
+$fade_transition_transform: 0.5;

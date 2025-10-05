@@ -1,0 +1,24 @@
+
+/* ------------------------
+/*   object/component/prefab/image
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.c-n-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // c-n-image img
+  img {
+    @include image(100%);
+    object-fit: contain;
+  }
+
+  // c-n-image.-image-fit img
+  &.-image-fit img {
+    object-fit: cover;
+    object-position: center;
+  }
+}

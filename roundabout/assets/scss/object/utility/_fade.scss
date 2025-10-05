@@ -1,0 +1,140 @@
+
+/* ------------------------
+/*   object/utility/fade
+/* -------------------------------- */
+
+@use 'sass:list';
+@use '../../global' as *;
+
+.is-n-hide {
+  opacity: 0;
+  transition: opacity $fade_transition_opacity+s;
+}
+
+.-fade-in {
+
+  // .-fade-in-left
+  &-left {
+    transform: translate(rv(50), 0) scale(1) rotate(0);
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+
+  // .-fade-in-right
+  &-right {
+    transform: translate(rv(-50), 0) scale(1) rotate(0);
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+
+  // .-fade-in-down
+  &-down {
+    transform: translate(0, rv(-50)) scale(1) rotate(0);
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+
+  // .-fade-in-up
+  &-up {
+    transform: translate(0, rv(50)) scale(1) rotate(0);
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+}
+
+.-fade-zoom {
+
+  // .-fade-zoom-in
+  &-in {
+    transform: translate(0, 0) scale(0) rotate(0);
+    transform-origin: center;
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+
+  // .-fade-zoom-out
+  &-out {
+    transform: translate(0, 0) scale(2) rotate(0);
+    transform-origin: center;
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+}
+
+.-fade-rotate {
+
+  // .-fade-rotate-left
+  &-left {
+    transform: translate(0, 0) scale(1) rotateZ(360deg);
+    transform-origin: center;
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+
+  // .-fade-rotate-right
+  &-right {
+    transform: translate(0, 0) scale(1) rotateZ(-360deg);
+    transform-origin: center;
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+
+  // .-fade-rotate-in
+  &-in {
+    transform: translate(0, 0) scale(0) rotateZ(360deg);
+    transition:
+      opacity $fade_transition_opacity+s ease-in-out,
+      transform $fade_transition_transform+s ease-in-out;
+  }
+
+  // .-fade-rotate-out
+  &-out {
+    transform: translate(0, 0) scale(2) rotateZ(-360deg);
+    transition:
+      opacity $fade_transition_opacity+s ease-in-out,
+      transform $fade_transition_transform+s ease-in-out;
+  }
+
+  // .-fade-rotate-x
+  &-x {
+    transform: translate(0, 0) scale(1) rotateX(180deg);
+    transform-origin: center;
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+
+  // .-fade-rotate-y
+  &-y {
+    transform: translate(0, 0) scale(1) rotateY(180deg);
+    transform-origin: center;
+    transition:
+      opacity $fade_transition_opacity+s,
+      transform $fade_transition_transform+s;
+  }
+}
+
+.is-n-show {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) rotate(0);
+}
+
+@for $i from 1 through 10 {
+  @if $i < 10 {
+    .-fade-delay0#{$i} {
+      transition-delay: list.nth($fade_transition_delay, $i)+s;
+    }
+  } @else {
+    .-fade-delay#{$i} {
+      transition-delay: list.nth($fade_transition_delay, $i)+s;
+    }
+  }
+}

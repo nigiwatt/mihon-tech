@@ -1,0 +1,47 @@
+
+/* ------------------------
+/*   object/utility/page/contact
+/* -------------------------------- */
+
+@use '../../../global' as *;
+
+.-contact .u-n-contact {
+  &-text01 {
+    color: #000000;
+    font-size: cv(20);
+    line-height: 1.8;
+  }
+
+  &-triangle {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &-triangle::after {
+    background-color: #000000;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    position: absolute;
+    top: calc(50% - rv(7));
+    right: rv(20);
+    width: rv(18);
+    height: rv(15);
+  }
+}
+
+@include breakpoint(sp) {
+
+  .-contact .u-n-contact {
+    &-text01 {
+      font-size: cv(14);
+      line-height: 1.5;
+    }
+
+    &-triangle::after {
+      top: calc(50% - rv(4));
+      right: rv(15);
+      width: rv(12);
+      height: rv(10);
+    }
+  }
+}

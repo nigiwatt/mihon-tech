@@ -1,0 +1,105 @@
+
+/* ------------------------
+/*   object/project/prefab/swiper/swiper01
+/* -------------------------------- */
+
+@use 'sass:map';
+@use '../../../../global' as *;
+
+@if map.has-key($prefabs, swiper01) or $gallery {
+
+  .p-n-swiper01 {
+    width: 100%;
+    overflow: hidden;
+
+    // .p-n-swiper01 .-swiper-inner
+    .-swiper-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    // .p-n-swiper01.-swiper-linear .swiper-wrapper
+    &.-swiper-linear .swiper-wrapper {
+      transition-timing-function: linear;
+    }
+  }
+
+  $swiper_image_width: 640;
+  $swiper_button_width: 50;
+  $swiper_button_height: 50;
+  $swiper_button_left: divide($swiper_image_width, 2) + divide($swiper_button_width, 2);
+  $swiper_button_right: divide($swiper_image_width, 2) + divide($swiper_button_width, 2);
+
+  div.swiper {
+    width: 100%;
+
+    // div.swiper .swiper-wrapper
+    .swiper-wrapper {
+      padding-bottom: rv(40);
+    }
+
+    // div.swiper .swiper-slide
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    // div.swiper .swiper-slide img
+    .swiper-slide img {
+      width: calc(100% - rv(10));
+      margin: 0 rv(5);
+    }
+
+    // div.swiper .swiper-button-prev,
+    // div.swiper .swiper-button-next
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: transparent;
+      top: calc(50% - rv(20));
+      width: rv($swiper_button_width);
+      height: rv($swiper_button_height);
+    }
+
+    // div.swiper .swiper-button-prev
+    .swiper-button-prev {
+      // left: calc(50% - rv($swiper_button_left));
+      left: calc(50% - 18vw);
+    }
+
+    // div.swiper .swiper-button-next
+    .swiper-button-next {
+      // right: calc(50% - rv($swiper_button_right));
+      right: calc(50% - 18vw);
+    }
+
+    // div.swiper .swiper-pagination .swiper-pagination-bullet
+    .swiper-pagination .swiper-pagination-bullet {
+      background-color: $color_lightgray_hex;
+      width: rv(12);
+      height: rv(12);
+      margin: 0 rv(8);
+      opacity: 1;
+    }
+
+    // div.swiper .swiper-pagination .swiper-pagination-bullet-active
+    .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: $color_gray_hex;
+      opacity: 1;
+    }
+  }
+
+  @include breakpoint(sp) {
+
+    div.swiper {
+      width: 100%;
+
+      // div.swiper .swiper-button-prev,
+      // div.swiper .swiper-button-next
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
+      }
+    }
+  }
+}

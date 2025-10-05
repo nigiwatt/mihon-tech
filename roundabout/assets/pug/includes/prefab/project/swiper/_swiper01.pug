@@ -1,0 +1,34 @@
+
+//-
+  +swiper01("button", "pagination", "defer")(
+    class="u-n-prefab",
+    data-width="640,375",
+    data-margin="30,6",
+    data-options="notAllowTouchMove | pauseOnMouseEnter | reverseDirection | linear",
+    data-delay="3000",
+    data-speed="1000"
+  )
+    .swiper-slide
+      +image("index/image.jpg")
+mixin swiper01(_button, _pagination, _defer, _prev="c-n-arrow01 -arrow-left", _next="c-n-arrow01 -arrow-right")
+  if attributes["data-options"].indexOf("linear") > -1
+    - attributes["data-options"] = "notAllowTouchMove" + attributes["data-options"].replace("pauseOnMouseEnter", "")
+    - attributes["data-delay"] = "0"
+    - attributes.class = (attributes.class || "") + " -swiper-linear"
+    - _button = ""
+    - _pagination = ""
+
+  - _button = (_button || "")
+  - _pagination = (_pagination || "")
+  - _defer = (_defer || "") != "" ? "-defer" : ""
+
+  .p-n-swiper.js-n-swiper&attributes(attributes)
+    .-swiper-inner
+      .swiper(class=_defer)
+        .swiper-wrapper
+          block
+        if _button != ""
+          .swiper-button-prev(class=_prev)
+          .swiper-button-next(class=_next)
+        if _pagination != ""
+          .swiper-pagination

@@ -1,0 +1,115 @@
+
+include /includes/_variables
+include /includes/_prefab
+
+-
+  const styles = [
+    //- "./assets/css/recruit.min.css",
+  ]
+
+-
+  const scripts = [
+    //- "./assets/js/recruit.min.js",
+    //- "./assets/js/jquery.min.js",
+    //- "./assets/js/swiper.min.js",
+  ]
+
+doctype html
+html(lang="ja")
+  include /includes/_head
+
+  body
+    //- include /includes/_trace
+    include /_header
+
+    main.-recruit
+      .l-n-fv
+        .l-n-inner.-wide.js-n-fv
+          .l-n-fv__main.c-n-view
+            h1 採用情報
+      .l-n-breadcrumb
+        .l-n-inner
+          nav.p-n-breadcrumb(aria-label="パンくずリスト")
+            ol.-list(itemscope, itemtype="https://schema.org/BreadcrumbList")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                +anchor('index.html')(class="-underline", itemprop="item")
+                  span(itemprop="name") トップ
+                meta(itemprop="position", content="1")
+              li(itemprop="itemListElement", itemscope, itemtype="https://schema.org/ListItem")
+                span(itemprop="name") 採用情報
+                meta(itemprop="position", content="2")
+        .l-n-inner
+          ul.u-n-fv-list.c-n-submenu
+            li.-opacity
+              +anchor("#entry") 新卒採用
+            li.-opacity
+              +anchor("#career") キャリア採用
+      #entry.l-n-recruit
+        .l-n-inner
+          h2.u-n-recruit-title
+            span.c-n-text-anim.js-n-text-anim.is-n-hide 新卒採用
+          ul.p-n-recruit-list
+            li.-title 職種
+            li.-data 製造エンジニア
+          ul.p-n-recruit-list
+            li.-title 仕事内容
+            li.-data 電子部品、工業用部品等の製造
+          ul.p-n-recruit-list
+            li.-title 雇用形態
+            li.-data 正社員
+          ul.p-n-recruit-list
+            li.-title 必須条件
+            li.-data 専門学校卒以上
+          ul.p-n-recruit-list
+            li.-title 勤務時間
+            li.-data 9:00〜18:00（時間外：40時間程度）
+          ul.p-n-recruit-list
+            li.-title 休日・休暇
+            li.-data 土日・祝日
+          ul.p-n-recruit-list
+            li.-title 給与
+            li.-data ¥285,000 〜
+          ul.p-n-recruit-list
+            li.-title 賞与
+            li.-data 年2回
+          ul.p-n-recruit-list
+            li.-title 待遇・福利厚生
+            li.-data 通勤手当、家族手当、健康保険、厚生年金保険、雇用保険、労災保険、退職金制度
+          +anchor("contact.html?entry")(class="u-n-recruit-button c-n-button -opacity") 新卒採用に応募する
+      .l-n-separate
+        .l-n-inner.-wide
+          +image("recruit/separate_image.webp","recruit/separate_image_sp.webp")(alt="", class="u-n-separate-image js-n-separate")
+      #career.l-n-recruit
+        .l-n-inner
+          h2.u-n-recruit-title
+            span.c-n-text-anim.js-n-text-anim.is-n-hide キャリア採用
+          ul.p-n-recruit-list
+            li.-title 職種
+            li.-data 品質管理エンジニア
+          ul.p-n-recruit-list
+            li.-title 仕事内容
+            li.-data 製造プロセスにおける品質・進捗管理、プロダクト設計等
+          ul.p-n-recruit-list
+            li.-title 雇用形態
+            li.-data 正社員
+          ul.p-n-recruit-list
+            li.-title 必須条件
+            li.-data 管理職経験等
+          ul.p-n-recruit-list
+            li.-title 勤務時間
+            li.-data 9:00〜21:00（時間外：60時間程度）
+          ul.p-n-recruit-list
+            li.-title 休日・休暇
+            li.-data 土日・祝日
+          ul.p-n-recruit-list
+            li.-title 給与
+            li.-data ¥458,000 〜
+          ul.p-n-recruit-list
+            li.-title 賞与
+            li.-data 年2回
+          ul.p-n-recruit-list
+            li.-title 待遇・福利厚生
+            li.-data 通勤手当、家族手当、健康保険、厚生年金保険、雇用保険、労災保険、退職金制度
+          +anchor("contact.html?career")(class="u-n-recruit-button c-n-button -opacity") キャリア採用に応募する
+
+    include /_footer

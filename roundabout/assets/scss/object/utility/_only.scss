@@ -1,0 +1,50 @@
+
+/* ------------------------
+/*   object/utility/only
+/* -------------------------------- */
+
+@use '../../global' as *;
+
+.-only-pc {
+  display: block;
+  &-flex         { display: flex; }         // .-only-pc-flex
+  &-inline       { display: inline; }       // .-only-pc-inline
+  &-inline-block { display: inline-block; } // .-only-pc-inline-block
+  &-inline-flex  { display: inline-flex; }  // .-only-pc-inline-flex
+}
+
+[class*='-only-tb'] {
+  display: none;
+}
+
+[class*='-only-sp'] {
+  display: none;
+}
+
+@include breakpoint('tb') {
+  .-only-tb {
+    display: block;
+    &-flex         { display: flex; }         // .-only-tb-flex
+    &-inline       { display: inline; }       // .-only-tb-inline
+    &-inline-block { display: inline-block; } // .-only-tb-inline-block
+    &-inline-flex  { display: inline-flex; }  // .-only-tb-inline-flex
+  }
+}
+
+@include breakpoint('sp') {
+  .-nobr {
+    display: none; /* Disable line breaks. And wrap the content. */
+  }
+
+  [class*='-only-pc'] {
+    display: none;
+  }
+
+  .-only-sp {
+    display: block;
+    &-flex         { display: flex; }         // .-only-sp-flex
+    &-inline       { display: inline; }       // .-only-sp-inline
+    &-inline-block { display: inline-block; } // .-only-sp-inline-block
+    &-inline-flex  { display: inline-flex; }  // .-only-sp-inline-flex
+  }
+}

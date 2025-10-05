@@ -52,8 +52,11 @@ HTML・SCSS・JavaScript・WordPress を中心に、再利用性・保守性の�
 
 ## 使用言語・ツール
 
-主な開発環境：macOS | Windows
+主な開発環境：macOS | Windows  
 主な開発ツール：Visual Studio Code, Adobe Creative Cloud, Google Chrome, Firefox, Safari, Edge
+
+※ソースコードのコメントについてはすべて英語で統一しております。  
+（VScode での日本語文字化け対策、国際化などの理由から）
 
 | 分類 | 使用技術 |
 |------|----------|

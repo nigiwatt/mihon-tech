@@ -62,6 +62,17 @@ add_action( 'admin_menu', function() {
     );
 
     add_settings_field(
+        'structured_data',
+        __( 'Structured Data', 'roundabout' ),
+        'options_detail_structured_data',
+        'options_detail',
+        'options_detail_section',
+        array(
+            'label_for' => 'structured_data'
+        )
+    );
+
+    add_settings_field(
         'google_recaptcha_v2_settings',
         __( 'Google reCAPTCHA v2 Settings', 'roundabout' ),
         'options_detail_google_recaptcha_v2',
@@ -92,6 +103,14 @@ add_action( 'admin_menu', function() {
     register_setting(
         'options_detail',
         'debug_display_enables',
+        array(
+            'sanitize_callback' => 'sanitize_fields'
+        )
+    );
+
+    register_setting(
+        'options_detail',
+        'structured_data',
         array(
             'sanitize_callback' => 'sanitize_fields'
         )
@@ -203,6 +222,27 @@ function options_detail_debug_display() {
 
 ?>
 <label><input type="checkbox" name="debug_display_enables[]"
+<?= checked( isset( $enable[ $key ] ), true ) ?> value="<?= $key ?>">
+<?= $value ?></label><br>
+<?php
+    }
+}
+
+// "Structured Data" field contents
+function options_detail_structured_data() {
+
+    $item = array(
+        'activate' => __( 'Activate Structured Data', 'roundabout' )
+    );
+
+    $enable = get_option( 'structured_data', array_keys( $item ) );
+    $enable = sanitize_fields( $enable );
+    $enable = array_flip( $enable );
+
+    foreach ( $item as $key => $value ) {
+
+?>
+<label><input type="checkbox" name="structured_data[]"
 <?= checked( isset( $enable[ $key ] ), true ) ?> value="<?= $key ?>">
 <?= $value ?></label><br>
 <?php

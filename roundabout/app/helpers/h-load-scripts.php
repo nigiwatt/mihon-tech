@@ -21,7 +21,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
     // Swiper
     $swiper_pages = [ 'company' ];
-    if( is_front_page() || is_page( $swiper_pages ) ) {
+    if ( is_front_page() || is_page( $swiper_pages ) ) {
 
         wp_enqueue_script(
             'swiper-script',
@@ -34,7 +34,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
     // Convert postal code to address
     $yubinbango_pages = [ 'contact' ];
-    if( is_page( $yubinbango_pages ) ) {
+    if ( is_page( $yubinbango_pages ) ) {
 
         wp_enqueue_script(
             'yubinbango-script',

@@ -1,5 +1,5 @@
 #: app/helpers/h-admin-options-detail.php:14
-#: app/helpers/h-admin-options-detail.php:122
+#: app/helpers/h-admin-options-detail.php:141
 msgid "Detail Settings"
 #: app/helpers/h-admin-options-detail.php:15
 msgid "Detail"
@@ -18,82 +18,90 @@ msgid "Debug Display Enables"
 msgstr ""
 
 #: app/helpers/h-admin-options-detail.php:66
+msgid "Structured Data"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:77
 msgid "Google reCAPTCHA v2 Settings"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:140
+#: app/helpers/h-admin-options-detail.php:159
 msgid "Menus"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:141
+#: app/helpers/h-admin-options-detail.php:160
 msgid "Widgets"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:162
+#: app/helpers/h-admin-options-detail.php:181
 msgid "Dashboard"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:163
+#: app/helpers/h-admin-options-detail.php:182
 msgid "Posts"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:164
+#: app/helpers/h-admin-options-detail.php:183
 msgid "Media"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:165
+#: app/helpers/h-admin-options-detail.php:184
 msgid "Pages"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:166
+#: app/helpers/h-admin-options-detail.php:185
 msgid "Comments"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:167
+#: app/helpers/h-admin-options-detail.php:186
 msgid "Appearance"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:168
+#: app/helpers/h-admin-options-detail.php:187
 msgid "Theme File Editor"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:169
+#: app/helpers/h-admin-options-detail.php:188
 msgid "Plugins"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:170
+#: app/helpers/h-admin-options-detail.php:189
 msgid "Plugin File Editor"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:171
+#: app/helpers/h-admin-options-detail.php:190
 msgid "Users"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:172
+#: app/helpers/h-admin-options-detail.php:191
 msgid "Tools"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:193
+#: app/helpers/h-admin-options-detail.php:212
 msgid "Notice"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:194
+#: app/helpers/h-admin-options-detail.php:213
 msgid "Warning"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:195
+#: app/helpers/h-admin-options-detail.php:214
 msgid "Deprecated"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:219
+#: app/helpers/h-admin-options-detail.php:235
+msgid "Activate Structured Data"
+msgstr ""
+
+#: app/helpers/h-admin-options-detail.php:259
 msgid "Site key"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:221
+#: app/helpers/h-admin-options-detail.php:261
 msgid "Secret key"
 msgstr ""
 
-#: app/helpers/h-admin-options-detail.php:255
+#: app/helpers/h-admin-options-detail.php:295
 msgid "Default widgets"
 msgstr ""
 
@@ -125,7 +133,7 @@ msgstr ""
 msgid "Top"
 msgstr ""
 
-#: app/helpers/h-breadcrumbs.php:93
+#: app/helpers/h-breadcrumbs.php:101
 msgid "404 not found"
 msgstr ""
 
@@ -144,6 +152,6 @@ msgstr ""
 #: functions.php:34
 msgid ""
 "The Roundabout theme specializes in allowing you to easily customize the "
-#: parts/breadcrumbs.php:8
+#: parts/breadcrumbs.php:13 parts/breadcrumbs.php:15 parts/breadcrumbs.php:33
 msgid "breadcrumbs"
 msgstr ""

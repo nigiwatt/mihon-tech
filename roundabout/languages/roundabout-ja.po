@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Roundabout\n"
-"POT-Creation-Date: 2025-10-03 13:52+0900\n"
-"PO-Revision-Date: 2025-10-03 13:54+0900\n"
+"POT-Creation-Date: 2025-10-08 20:24+0900\n"
+"PO-Revision-Date: 2025-10-08 20:25+0900\n"
 "Last-Translator: \n"
 "Language-Team: Roundabout Developers\n"
 "Language: ja\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: app/helpers/h-admin-options-detail.php:14
-#: app/helpers/h-admin-options-detail.php:122
+#: app/helpers/h-admin-options-detail.php:141
 msgid "Detail Settings"
 msgstr "詳細設定"
 
@@ -36,82 +36,90 @@ msgid "Debug Display Enables"
 msgstr "デバッグ表示の有効化"
 
 #: app/helpers/h-admin-options-detail.php:66
+msgid "Structured Data"
+msgstr "構造化データ"
+
+#: app/helpers/h-admin-options-detail.php:77
 msgid "Google reCAPTCHA v2 Settings"
 msgstr "Google reCAPTCHA v2 設定"
 
-#: app/helpers/h-admin-options-detail.php:140
+#: app/helpers/h-admin-options-detail.php:159
 msgid "Menus"
 msgstr "メニュー"
 
-#: app/helpers/h-admin-options-detail.php:141
+#: app/helpers/h-admin-options-detail.php:160
 msgid "Widgets"
 msgstr "ウィジェット"
 
-#: app/helpers/h-admin-options-detail.php:162
+#: app/helpers/h-admin-options-detail.php:181
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
-#: app/helpers/h-admin-options-detail.php:163
+#: app/helpers/h-admin-options-detail.php:182
 msgid "Posts"
 msgstr "投稿"
 
-#: app/helpers/h-admin-options-detail.php:164
+#: app/helpers/h-admin-options-detail.php:183
 msgid "Media"
 msgstr "メディア"
 
-#: app/helpers/h-admin-options-detail.php:165
+#: app/helpers/h-admin-options-detail.php:184
 msgid "Pages"
 msgstr "固定ページ"
 
-#: app/helpers/h-admin-options-detail.php:166
+#: app/helpers/h-admin-options-detail.php:185
 msgid "Comments"
 msgstr "コメント"
 
-#: app/helpers/h-admin-options-detail.php:167
+#: app/helpers/h-admin-options-detail.php:186
 msgid "Appearance"
 msgstr "外観"
 
-#: app/helpers/h-admin-options-detail.php:168
+#: app/helpers/h-admin-options-detail.php:187
 msgid "Theme File Editor"
 msgstr "テーマファイルエディター"
 
-#: app/helpers/h-admin-options-detail.php:169
+#: app/helpers/h-admin-options-detail.php:188
 msgid "Plugins"
 msgstr "プラグイン"
 
-#: app/helpers/h-admin-options-detail.php:170
+#: app/helpers/h-admin-options-detail.php:189
 msgid "Plugin File Editor"
 msgstr "プラグインファイルエディター"
 
-#: app/helpers/h-admin-options-detail.php:171
+#: app/helpers/h-admin-options-detail.php:190
 msgid "Users"
 msgstr "ユーザー"
 
-#: app/helpers/h-admin-options-detail.php:172
+#: app/helpers/h-admin-options-detail.php:191
 msgid "Tools"
 msgstr "ツール"
 
-#: app/helpers/h-admin-options-detail.php:193
+#: app/helpers/h-admin-options-detail.php:212
 msgid "Notice"
 msgstr "通知（Notice）"
 
-#: app/helpers/h-admin-options-detail.php:194
+#: app/helpers/h-admin-options-detail.php:213
 msgid "Warning"
 msgstr "警告（Warning）"
 
-#: app/helpers/h-admin-options-detail.php:195
+#: app/helpers/h-admin-options-detail.php:214
 msgid "Deprecated"
 msgstr "廃止（Depricated）"
 
-#: app/helpers/h-admin-options-detail.php:219
+#: app/helpers/h-admin-options-detail.php:235
+msgid "Activate Structured Data"
+msgstr "構造化データをアクティブにする"
+
+#: app/helpers/h-admin-options-detail.php:259
 msgid "Site key"
 msgstr "サイトキー"
 
-#: app/helpers/h-admin-options-detail.php:221
+#: app/helpers/h-admin-options-detail.php:261
 msgid "Secret key"
 msgstr "シークレットキー"
 
-#: app/helpers/h-admin-options-detail.php:255
+#: app/helpers/h-admin-options-detail.php:295
 msgid "Default widgets"
 msgstr "デフォルト ウィジェット"
 
@@ -143,7 +151,7 @@ msgstr "テキスト"
 msgid "Top"
 msgstr "トップ"
 
-#: app/helpers/h-breadcrumbs.php:93
+#: app/helpers/h-breadcrumbs.php:101
 msgid "404 not found"
 msgstr "ページが見つかりませんでした"
 
@@ -174,6 +182,6 @@ msgstr ""
 "お、このテーマは MVC モデルに基づき最適化されており、外観と機能における依存関"
 "係の一貫性が保たれているため、安定的な WordPress の運用が可能になります。"
 
-#: parts/breadcrumbs.php:8
+#: parts/breadcrumbs.php:13 parts/breadcrumbs.php:15 parts/breadcrumbs.php:33
 msgid "breadcrumbs"
 msgstr "パンくずリスト"

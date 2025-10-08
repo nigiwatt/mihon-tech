@@ -14,6 +14,9 @@ class News {
         $this->content = get_the_content( $post_id );
         $this->id      = $post_id;
         $this->title   = get_the_title( $post_id );
+
+        $this->author_name = get_the_author_meta( 'display_name', get_post_field( 'post_author', $post_id ) );
+        $this->author_url  = get_author_posts_url( $post_id );
     }
 
     public function date( $format = '' ) {

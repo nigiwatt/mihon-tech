@@ -7,6 +7,7 @@
 
 body:has(.-input-form:checked) {
   overflow: hidden;
+  overflow-y: scroll;
 }
 
 .-header .l-n-header {

@@ -249,6 +249,7 @@ textarea[class^="-"], textarea[class*=-n-] {
 /* -------------------------------- */
 body:has(.-input-form:checked) {
   overflow: hidden;
+  overflow-y: scroll;
 }
 
 .-header .l-n-header {
@@ -1434,7 +1435,7 @@ header, footer, main,
 }
 
 .p-n-index-card:nth-child(4) {
-  margin-left: calc(8 * var(--rv));
+  margin-left: calc(6 * var(--rv));
 }
 
 .p-n-index-card-button {
@@ -3385,6 +3386,7 @@ ol.p-n-privacy ol {
 .-products .u-n-products-image {
   box-shadow: 0 calc(0.3 * var(--rv)) calc(0.6 * var(--rv)) rgba(0, 0, 0, 0.3);
   width: calc(60 * var(--rv));
+  height: 100%;
   margin-top: calc(4.5 * var(--rv));
   z-index: 1;
 }

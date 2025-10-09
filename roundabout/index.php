@@ -10,17 +10,17 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-fv-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/index/fv_slide01.webp 1x, ./assets/img/index/fv_slide01@2x.webp 2x" width="1920" height="900"><img src="./assets/img/index/fv_slide01_sp.webp" srcset="./assets/img/index/fv_slide01_sp.webp 1x, ./assets/img/index/fv_slide01_sp@2x.webp 2x" width="375" height="667" alt="スライド" fetchpriority="high">
+                      <source media="(min-width: 751px)" srcset="./assets/img/index/fv_slide01.webp 1x, ./assets/img/index/fv_slide01@2x.webp 2x" width="1920" height="900"><img src="./assets/img/index/fv_slide01_sp.webp" srcset="./assets/img/index/fv_slide01_sp.webp 1x, ./assets/img/index/fv_slide01_sp@2x.webp 2x" width="375" height="667" alt="男性従業員のスライド" fetchpriority="high">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-fv-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/index/fv_slide02.webp 1x, ./assets/img/index/fv_slide02@2x.webp 2x" width="1920" height="900"><img src="./assets/img/index/fv_slide02_sp.webp" srcset="./assets/img/index/fv_slide02_sp.webp 1x, ./assets/img/index/fv_slide02_sp@2x.webp 2x" width="375" height="667" alt="スライド" fetchpriority="high">
+                      <source media="(min-width: 751px)" srcset="./assets/img/index/fv_slide02.webp 1x, ./assets/img/index/fv_slide02@2x.webp 2x" width="1920" height="900"><img src="./assets/img/index/fv_slide02_sp.webp" srcset="./assets/img/index/fv_slide02_sp.webp 1x, ./assets/img/index/fv_slide02_sp@2x.webp 2x" width="375" height="667" alt="男性従業員たちのスライド" fetchpriority="high">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-fv-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/index/fv_slide03.webp 1x, ./assets/img/index/fv_slide03@2x.webp 2x" width="1920" height="900"><img src="./assets/img/index/fv_slide03_sp.webp" srcset="./assets/img/index/fv_slide03_sp.webp 1x, ./assets/img/index/fv_slide03_sp@2x.webp 2x" width="375" height="667" alt="スライド" fetchpriority="high">
+                      <source media="(min-width: 751px)" srcset="./assets/img/index/fv_slide03.webp 1x, ./assets/img/index/fv_slide03@2x.webp 2x" width="1920" height="900"><img src="./assets/img/index/fv_slide03_sp.webp" srcset="./assets/img/index/fv_slide03_sp.webp 1x, ./assets/img/index/fv_slide03_sp@2x.webp 2x" width="375" height="667" alt="女性従業員のスライド" fetchpriority="high">
                     </picture>
                   </div>
                 </div>
@@ -57,22 +57,22 @@ get_template_part( 'parts/news', 'index', [ 'query' => $news_query ] );
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-about-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide01.webp 1x, ./assets/img/index/about_slide01@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide01_sp.webp" srcset="./assets/img/index/about_slide01_sp.webp 1x, ./assets/img/index/about_slide01_sp@2x.webp 2x" width="295" height="183" alt="スライド" fetchpriority="high">
+                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide01.webp 1x, ./assets/img/index/about_slide01@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide01_sp.webp" srcset="./assets/img/index/about_slide01_sp.webp 1x, ./assets/img/index/about_slide01_sp@2x.webp 2x" width="295" height="183" alt="記録する男性従業員のスライド" fetchpriority="high">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-about-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide02.webp 1x, ./assets/img/index/about_slide02@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide02_sp.webp" srcset="./assets/img/index/about_slide02_sp.webp 1x, ./assets/img/index/about_slide02_sp@2x.webp 2x" width="295" height="183" alt="スライド" fetchpriority="high">
+                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide02.webp 1x, ./assets/img/index/about_slide02@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide02_sp.webp" srcset="./assets/img/index/about_slide02_sp.webp 1x, ./assets/img/index/about_slide02_sp@2x.webp 2x" width="295" height="183" alt="チェックする男性従業員のスライド" fetchpriority="high">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-about-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide03.webp 1x, ./assets/img/index/about_slide03@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide03_sp.webp" srcset="./assets/img/index/about_slide03_sp.webp 1x, ./assets/img/index/about_slide03_sp@2x.webp 2x" width="296" height="183" alt="スライド" fetchpriority="high">
+                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide03.webp 1x, ./assets/img/index/about_slide03@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide03_sp.webp" srcset="./assets/img/index/about_slide03_sp.webp 1x, ./assets/img/index/about_slide03_sp@2x.webp 2x" width="296" height="183" alt="ベテラン男性従業員のスライド" fetchpriority="high">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-about-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide04.webp 1x, ./assets/img/index/about_slide04@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide04_sp.webp" srcset="./assets/img/index/about_slide04_sp.webp 1x, ./assets/img/index/about_slide04_sp@2x.webp 2x" width="295" height="183" alt="スライド" fetchpriority="high">
+                      <source media="(min-width: 751px)" srcset="./assets/img/index/about_slide04.webp 1x, ./assets/img/index/about_slide04@2x.webp 2x" width="590" height="365"><img src="./assets/img/index/about_slide04_sp.webp" srcset="./assets/img/index/about_slide04_sp.webp 1x, ./assets/img/index/about_slide04_sp@2x.webp 2x" width="295" height="183" alt="監督する女性従業員のスライド" fetchpriority="high">
                     </picture>
                   </div>
                 </div>
@@ -88,27 +88,27 @@ get_template_part( 'parts/news', 'index', [ 'query' => $news_query ] );
           <h2 class="u-n-products-title">製品紹介</h2>
           <div class="l-n-products__card"><a class="p-n-index-card is-n-hide -fade-in-up" href="<?php echo esc_url( get_page_url( 'products', '#electronic' ) ); ?>">
               <picture class="c-n-image u-n-products-thumb">
-                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb01.webp 1x, ./assets/img/index/products_thumb01@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb01_sp.webp" srcset="./assets/img/index/products_thumb01_sp.webp 1x, ./assets/img/index/products_thumb01_sp@2x.webp 2x" width="137" height="90" alt="サムネイル" loading="lazy">
+                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb01.webp 1x, ./assets/img/index/products_thumb01@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb01_sp.webp" srcset="./assets/img/index/products_thumb01_sp.webp 1x, ./assets/img/index/products_thumb01_sp@2x.webp 2x" width="137" height="90" alt="電子部品のイメージ" loading="lazy">
               </picture><span class="u-n-products-card-en c-n-ShareTech">Electronic Components</span>
               <h3 class="u-n-products-card-title">電子部品</h3><span class="p-n-index-card-button"><span>詳細を見る</span><span class="-arrow c-n-button-arrow"><span></span></span></span></a><a class="p-n-index-card is-n-hide -fade-chain01 -fade-delay01 -fade-in-up" href="<?php echo esc_url( get_page_url( 'products', '#screws' ) ); ?>">
               <picture class="c-n-image u-n-products-thumb">
-                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb02.webp 1x, ./assets/img/index/products_thumb02@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb02_sp.webp" srcset="./assets/img/index/products_thumb02_sp.webp 1x, ./assets/img/index/products_thumb02_sp@2x.webp 2x" width="137" height="90" alt="サムネイル" loading="lazy">
+                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb02.webp 1x, ./assets/img/index/products_thumb02@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb02_sp.webp" srcset="./assets/img/index/products_thumb02_sp.webp 1x, ./assets/img/index/products_thumb02_sp@2x.webp 2x" width="137" height="90" alt="ネジのイメージ" loading="lazy">
               </picture><span class="u-n-products-card-en c-n-ShareTech">Screws</span>
               <h3 class="u-n-products-card-title">ネジ類</h3><span class="p-n-index-card-button"><span>詳細を見る</span><span class="-arrow c-n-button-arrow"><span></span></span></span></a><a class="p-n-index-card is-n-hide -fade-chain01 -fade-delay02 -fade-in-up" href="<?php echo esc_url( get_page_url( 'products', '#springs' ) ); ?>">
               <picture class="c-n-image u-n-products-thumb">
-                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb03.webp 1x, ./assets/img/index/products_thumb03@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb03_sp.webp" srcset="./assets/img/index/products_thumb03_sp.webp 1x, ./assets/img/index/products_thumb03_sp@2x.webp 2x" width="137" height="90" alt="サムネイル" loading="lazy">
+                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb03.webp 1x, ./assets/img/index/products_thumb03@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb03_sp.webp" srcset="./assets/img/index/products_thumb03_sp.webp 1x, ./assets/img/index/products_thumb03_sp@2x.webp 2x" width="137" height="90" alt="バネのイメージ" loading="lazy">
               </picture><span class="u-n-products-card-en c-n-ShareTech">Springs</span>
               <h3 class="u-n-products-card-title">バネ類</h3><span class="p-n-index-card-button"><span>詳細を見る</span><span class="-arrow c-n-button-arrow"><span></span></span></span></a><a class="p-n-index-card is-n-hide -fade-chain01 -fade-delay03 -fade-in-up" href="<?php echo esc_url( get_page_url( 'products', '#gears' ) ); ?>">
               <picture class="c-n-image u-n-products-thumb">
-                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb04.webp 1x, ./assets/img/index/products_thumb04@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb04_sp.webp" srcset="./assets/img/index/products_thumb04_sp.webp 1x, ./assets/img/index/products_thumb04_sp@2x.webp 2x" width="137" height="90" alt="サムネイル" loading="lazy">
+                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb04.webp 1x, ./assets/img/index/products_thumb04@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb04_sp.webp" srcset="./assets/img/index/products_thumb04_sp.webp 1x, ./assets/img/index/products_thumb04_sp@2x.webp 2x" width="137" height="90" alt="ギアのイメージ" loading="lazy">
               </picture><span class="u-n-products-card-en c-n-ShareTech">Gears</span>
               <h3 class="u-n-products-card-title">ギア類</h3><span class="p-n-index-card-button"><span>詳細を見る</span><span class="-arrow c-n-button-arrow"><span></span></span></span></a><a class="p-n-index-card is-n-hide -fade-chain01 -fade-delay04 -fade-in-up" href="<?php echo esc_url( get_page_url( 'products', '#medical' ) ); ?>">
               <picture class="c-n-image u-n-products-thumb">
-                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb05.webp 1x, ./assets/img/index/products_thumb05@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb05_sp.webp" srcset="./assets/img/index/products_thumb05_sp.webp 1x, ./assets/img/index/products_thumb05_sp@2x.webp 2x" width="137" height="90" alt="サムネイル" loading="lazy">
+                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb05.webp 1x, ./assets/img/index/products_thumb05@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb05_sp.webp" srcset="./assets/img/index/products_thumb05_sp.webp 1x, ./assets/img/index/products_thumb05_sp@2x.webp 2x" width="137" height="90" alt="医療機器のイメージ" loading="lazy">
               </picture><span class="u-n-products-card-en c-n-ShareTech">Medical Device</span>
               <h3 class="u-n-products-card-title">医療機器</h3><span class="p-n-index-card-button"><span>詳細を見る</span><span class="-arrow c-n-button-arrow"><span></span></span></span></a><a class="p-n-index-card is-n-hide -fade-chain01 -fade-delay05 -fade-in-up" href="<?php echo esc_url( get_page_url( 'products', '#industrial' ) ); ?>">
               <picture class="c-n-image u-n-products-thumb">
-                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb06.webp 1x, ./assets/img/index/products_thumb06@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb06_sp.webp" srcset="./assets/img/index/products_thumb06_sp.webp 1x, ./assets/img/index/products_thumb06_sp@2x.webp 2x" width="137" height="90" alt="サムネイル" loading="lazy">
+                <source media="(min-width: 751px)" srcset="./assets/img/index/products_thumb06.webp 1x, ./assets/img/index/products_thumb06@2x.webp 2x" width="360" height="220"><img src="./assets/img/index/products_thumb06_sp.webp" srcset="./assets/img/index/products_thumb06_sp.webp 1x, ./assets/img/index/products_thumb06_sp@2x.webp 2x" width="137" height="90" alt="工業用機械のイメージ" loading="lazy">
               </picture><span class="u-n-products-card-en c-n-ShareTech">Industrial Device</span>
               <h3 class="u-n-products-card-title">工業用機械</h3><span class="p-n-index-card-button"><span>詳細を見る</span><span class="-arrow c-n-button-arrow"><span></span></span></span></a>
           </div>
@@ -123,13 +123,13 @@ get_template_part( 'parts/news', 'index', [ 'query' => $news_query ] );
           </div>
           <div class="l-n-feature__images">
             <picture class="c-n-image u-n-feature-picture01 is-n-hide -fade-rotate-y">
-              <source media="(min-width: 751px)" srcset="./assets/img/index/feature_picture01.webp 1x, ./assets/img/index/feature_picture01@2x.webp 2x" width="236" height="754"><img src="./assets/img/index/feature_picture01_sp.webp" srcset="./assets/img/index/feature_picture01_sp.webp 1x, ./assets/img/index/feature_picture01_sp@2x.webp 2x" width="110" height="351" alt="人物写真" loading="lazy">
+              <source media="(min-width: 751px)" srcset="./assets/img/index/feature_picture01.webp 1x, ./assets/img/index/feature_picture01@2x.webp 2x" width="236" height="754"><img src="./assets/img/index/feature_picture01_sp.webp" srcset="./assets/img/index/feature_picture01_sp.webp 1x, ./assets/img/index/feature_picture01_sp@2x.webp 2x" width="110" height="351" alt="入念にチェックを行う男性従業員の写真" loading="lazy">
             </picture>
             <picture class="c-n-image u-n-feature-picture02 is-n-hide -fade-rotate-y -fade-delay01">
-              <source media="(min-width: 751px)" srcset="./assets/img/index/feature_picture02.webp 1x, ./assets/img/index/feature_picture02@2x.webp 2x" width="236" height="754"><img src="./assets/img/index/feature_picture02_sp.webp" srcset="./assets/img/index/feature_picture02_sp.webp 1x, ./assets/img/index/feature_picture02_sp@2x.webp 2x" width="110" height="360" alt="人物写真" loading="lazy">
+              <source media="(min-width: 751px)" srcset="./assets/img/index/feature_picture02.webp 1x, ./assets/img/index/feature_picture02@2x.webp 2x" width="236" height="754"><img src="./assets/img/index/feature_picture02_sp.webp" srcset="./assets/img/index/feature_picture02_sp.webp 1x, ./assets/img/index/feature_picture02_sp@2x.webp 2x" width="110" height="360" alt="意気揚々としている男性従業員の写真" loading="lazy">
             </picture>
             <picture class="c-n-image u-n-feature-picture03 is-n-hide -fade-rotate-y -fade-delay02">
-              <source media="(min-width: 751px)" srcset="./assets/img/index/feature_picture03.webp 1x, ./assets/img/index/feature_picture03@2x.webp 2x" width="236" height="754"><img src="./assets/img/index/feature_picture03_sp.webp" srcset="./assets/img/index/feature_picture03_sp.webp 1x, ./assets/img/index/feature_picture03_sp@2x.webp 2x" width="110" height="360" alt="人物写真" loading="lazy">
+              <source media="(min-width: 751px)" srcset="./assets/img/index/feature_picture03.webp 1x, ./assets/img/index/feature_picture03@2x.webp 2x" width="236" height="754"><img src="./assets/img/index/feature_picture03_sp.webp" srcset="./assets/img/index/feature_picture03_sp.webp 1x, ./assets/img/index/feature_picture03_sp@2x.webp 2x" width="110" height="360" alt="エンジニアとして活躍する女性従業員の写真" loading="lazy">
             </picture>
           </div>
         </div>
@@ -137,7 +137,7 @@ get_template_part( 'parts/news', 'index', [ 'query' => $news_query ] );
       <div class="l-n-recruit -opacity" id="recruit">
         <div class="l-n-inner -wide"><a class="l-n-recruit__link" href="<?php echo esc_url( get_page_url( 'recruit' ) ); ?>">
             <div class="p-n-index-recruit"><span class="u-n-recruit-en c-n-en c-n-ShareTech">Recruit</span>
-              <h2 class="u-n-recruit-title">採用情報</h2><img class="u-n-recruit-arrow" src="./assets/img/index/recruit_arrow.svg" width="100" height="100" alt="" loading="lazy">
+              <h2 class="u-n-recruit-title">採用情報</h2><img class="u-n-recruit-arrow" src="./assets/img/index/recruit_arrow.svg" width="100" height="100" alt="現場で作業する従業員たち" loading="lazy">
             </div></a>
         </div>
       </div>

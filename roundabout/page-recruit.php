@@ -66,7 +66,7 @@
       <div class="l-n-separate">
         <div class="l-n-inner -wide">
           <picture class="c-n-image u-n-separate-image js-n-separate">
-            <source media="(min-width: 751px)" srcset="./assets/img/recruit/separate_image.webp 1x, ./assets/img/recruit/separate_image@2x.webp 2x" width="1920" height="874"><img src="./assets/img/recruit/separate_image_sp.webp" srcset="./assets/img/recruit/separate_image_sp.webp 1x, ./assets/img/recruit/separate_image_sp@2x.webp 2x" width="320" height="437" alt="">
+            <source media="(min-width: 751px)" srcset="./assets/img/recruit/separate_image.webp 1x, ./assets/img/recruit/separate_image@2x.webp 2x" width="1920" height="874"><img src="./assets/img/recruit/separate_image_sp.webp" srcset="./assets/img/recruit/separate_image_sp.webp 1x, ./assets/img/recruit/separate_image_sp@2x.webp 2x" width="320" height="437" alt="契約が成立して握手をする人たち">
           </picture>
         </div>
       </div>

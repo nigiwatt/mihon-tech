@@ -2,12 +2,12 @@
     <footer class="-footer">
       <div class="l-n-contact">
         <div class="l-n-inner">
-          <div class="l-n-contact__left"><img class="u-n-contact-tel" src="./assets/img/common/contact_tel.svg" width="64" height="64" alt="" loading="lazy">
+          <div class="l-n-contact__left"><img class="u-n-contact-tel" src="./assets/img/common/contact_tel.svg" width="64" height="64" alt="電話" loading="lazy">
             <div class="p-n-footer-phone"><span class="u-n-contact-head">電話でのお問い合わせ</span><span class="u-n-contact-number">03-1234-XXXX</span><span class="u-n-contact-note">平日 9:00〜17:00　土日祝定休</span></div>
           </div>
           <?php if ( !is_page( [ 'contact', 'confirm', 'thanks' ] ) ) : ?>
           <div class="l-n-contact__right"><a class="-opacity" href="<?php echo esc_url( get_page_url( 'contact' ) ); ?>"><span class="u-n-contact-en c-n-en c-n-ShareTech">Contact</span>
-              <h2 class="u-n-contact-title">お問い合わせ</h2><img class="u-n-contact-mail" src="./assets/img/common/contact_mail.svg" width="100" height="100" alt="" loading="lazy"></a>
+              <h2 class="u-n-contact-title">お問い合わせ</h2><img class="u-n-contact-mail" src="./assets/img/common/contact_mail.svg" width="100" height="100" alt="メール" loading="lazy"></a>
           </div>
           <?php endif; ?>
         </div>

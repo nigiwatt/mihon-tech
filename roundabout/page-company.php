@@ -33,7 +33,7 @@
           <h2 class="u-n-greeting-title c-n-head"><span class="c-n-text-anim js-n-text-anim is-n-hide">代表ごあいさつ</span></h2>
           <div class="l-n-greeting__left">
             <picture class="c-n-image u-n-greeting-image">
-              <source media="(min-width: 751px)" srcset="./assets/img/company/greeting_image.webp 1x, ./assets/img/company/greeting_image@2x.webp 2x" width="500" height="600"><img src="./assets/img/company/greeting_image_sp.webp" srcset="./assets/img/company/greeting_image_sp.webp 1x, ./assets/img/company/greeting_image_sp@2x.webp 2x" width="250" height="300" alt="代表取締役">
+              <source media="(min-width: 751px)" srcset="./assets/img/company/greeting_image.webp 1x, ./assets/img/company/greeting_image@2x.webp 2x" width="500" height="600"><img src="./assets/img/company/greeting_image_sp.webp" srcset="./assets/img/company/greeting_image_sp.webp 1x, ./assets/img/company/greeting_image_sp@2x.webp 2x" width="250" height="300" alt="代表取締役のイメージ">
             </picture>
           </div>
           <p class="u-n-greeting-text">私たちは創業以来、技術への飽くなき探求とクオリティへのこだわりを軸に、ものづくりの現場に誠実に向き合ってまいりました。<br><br>昨今、電子機器をはじめとする産業はグローバル化とともに急速に進化し、かつてない精度や柔軟性が求められています。当社はこうした変化に果敢に挑み、世界中のパートナーとともに、新たな価値を創出し続けています。<br><br>技術は人が育み、人は挑戦によって成長します。当社のエンジニアは、国内外を問わず多くの現場で経験を重ね、高い評価をいただいております。<br><br>これからも私たちは、積み重ねてきた技術力と現場力を武器に、持続可能な社会の実現に貢献しながら、未来につながるものづくりを追求してまいります。<br><br>今後とも変わらぬご支援を賜りますようお願い申し上げます。</p>
@@ -47,7 +47,7 @@
       <div class="l-n-separate">
         <div class="l-n-inner -wide">
           <picture class="c-n-image u-n-separate-image js-n-separate">
-            <source media="(min-width: 751px)" srcset="./assets/img/company/separate_image01.webp 1x, ./assets/img/company/separate_image01@2x.webp 2x" width="1920" height="1080"><img src="./assets/img/company/separate_image01_sp.webp" srcset="./assets/img/company/separate_image01_sp.webp 1x, ./assets/img/company/separate_image01_sp@2x.webp 2x" width="375" height="540" alt="">
+            <source media="(min-width: 751px)" srcset="./assets/img/company/separate_image01.webp 1x, ./assets/img/company/separate_image01@2x.webp 2x" width="1920" height="1080"><img src="./assets/img/company/separate_image01_sp.webp" srcset="./assets/img/company/separate_image01_sp.webp 1x, ./assets/img/company/separate_image01_sp@2x.webp 2x" width="375" height="540" alt="事業所内のパララックスイメージ">
           </picture>
         </div>
       </div>
@@ -123,52 +123,52 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide01.webp 1x, ./assets/img/company/sustainable_slide01@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide01_sp.webp" srcset="./assets/img/company/sustainable_slide01_sp.webp 1x, ./assets/img/company/sustainable_slide01_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide01.webp 1x, ./assets/img/company/sustainable_slide01@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide01_sp.webp" srcset="./assets/img/company/sustainable_slide01_sp.webp 1x, ./assets/img/company/sustainable_slide01_sp@2x.webp 2x" width="240" height="160" alt="新製品を開発している従業員たち">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide02.webp 1x, ./assets/img/company/sustainable_slide02@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide02_sp.webp" srcset="./assets/img/company/sustainable_slide02_sp.webp 1x, ./assets/img/company/sustainable_slide02_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide02.webp 1x, ./assets/img/company/sustainable_slide02@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide02_sp.webp" srcset="./assets/img/company/sustainable_slide02_sp.webp 1x, ./assets/img/company/sustainable_slide02_sp@2x.webp 2x" width="240" height="160" alt="ロボットと握手をするビジネスマン">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide03.webp 1x, ./assets/img/company/sustainable_slide03@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide03_sp.webp" srcset="./assets/img/company/sustainable_slide03_sp.webp 1x, ./assets/img/company/sustainable_slide03_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide03.webp 1x, ./assets/img/company/sustainable_slide03@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide03_sp.webp" srcset="./assets/img/company/sustainable_slide03_sp.webp 1x, ./assets/img/company/sustainable_slide03_sp@2x.webp 2x" width="240" height="160" alt="会議は踊る">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide04.webp 1x, ./assets/img/company/sustainable_slide04@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide04_sp.webp" srcset="./assets/img/company/sustainable_slide04_sp.webp 1x, ./assets/img/company/sustainable_slide04_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide04.webp 1x, ./assets/img/company/sustainable_slide04@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide04_sp.webp" srcset="./assets/img/company/sustainable_slide04_sp.webp 1x, ./assets/img/company/sustainable_slide04_sp@2x.webp 2x" width="240" height="160" alt="交渉が成立">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide05.webp 1x, ./assets/img/company/sustainable_slide05@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide05_sp.webp" srcset="./assets/img/company/sustainable_slide05_sp.webp 1x, ./assets/img/company/sustainable_slide05_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide05.webp 1x, ./assets/img/company/sustainable_slide05@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide05_sp.webp" srcset="./assets/img/company/sustainable_slide05_sp.webp 1x, ./assets/img/company/sustainable_slide05_sp@2x.webp 2x" width="240" height="160" alt="機器のチェックを行う従業員">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide01.webp 1x, ./assets/img/company/sustainable_slide01@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide01_sp.webp" srcset="./assets/img/company/sustainable_slide01_sp.webp 1x, ./assets/img/company/sustainable_slide01_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide01.webp 1x, ./assets/img/company/sustainable_slide01@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide01_sp.webp" srcset="./assets/img/company/sustainable_slide01_sp.webp 1x, ./assets/img/company/sustainable_slide01_sp@2x.webp 2x" width="240" height="160" alt="新製品を開発している従業員たち">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide02.webp 1x, ./assets/img/company/sustainable_slide02@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide02_sp.webp" srcset="./assets/img/company/sustainable_slide02_sp.webp 1x, ./assets/img/company/sustainable_slide02_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide02.webp 1x, ./assets/img/company/sustainable_slide02@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide02_sp.webp" srcset="./assets/img/company/sustainable_slide02_sp.webp 1x, ./assets/img/company/sustainable_slide02_sp@2x.webp 2x" width="240" height="160" alt="ロボットと握手をするビジネスマン">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide03.webp 1x, ./assets/img/company/sustainable_slide03@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide03_sp.webp" srcset="./assets/img/company/sustainable_slide03_sp.webp 1x, ./assets/img/company/sustainable_slide03_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide03.webp 1x, ./assets/img/company/sustainable_slide03@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide03_sp.webp" srcset="./assets/img/company/sustainable_slide03_sp.webp 1x, ./assets/img/company/sustainable_slide03_sp@2x.webp 2x" width="240" height="160" alt="会議は踊る">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide04.webp 1x, ./assets/img/company/sustainable_slide04@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide04_sp.webp" srcset="./assets/img/company/sustainable_slide04_sp.webp 1x, ./assets/img/company/sustainable_slide04_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide04.webp 1x, ./assets/img/company/sustainable_slide04@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide04_sp.webp" srcset="./assets/img/company/sustainable_slide04_sp.webp 1x, ./assets/img/company/sustainable_slide04_sp@2x.webp 2x" width="240" height="160" alt="交渉が成立">
                     </picture>
                   </div>
                   <div class="swiper-slide">
                     <picture class="c-n-image u-n-sustainable-slide">
-                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide05.webp 1x, ./assets/img/company/sustainable_slide05@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide05_sp.webp" srcset="./assets/img/company/sustainable_slide05_sp.webp 1x, ./assets/img/company/sustainable_slide05_sp@2x.webp 2x" width="240" height="160" alt="スライド">
+                      <source media="(min-width: 751px)" srcset="./assets/img/company/sustainable_slide05.webp 1x, ./assets/img/company/sustainable_slide05@2x.webp 2x" width="480" height="320"><img src="./assets/img/company/sustainable_slide05_sp.webp" srcset="./assets/img/company/sustainable_slide05_sp.webp 1x, ./assets/img/company/sustainable_slide05_sp@2x.webp 2x" width="240" height="160" alt="機器のチェックを行う従業員">
                     </picture>
                   </div>
                 </div>
@@ -206,10 +206,10 @@
           </div>
           <div class="l-n-history__images">
             <picture class="c-n-image u-n-history-image">
-              <source media="(min-width: 751px)" srcset="./assets/img/company/history_image01.webp 1x, ./assets/img/company/history_image01@2x.webp 2x" width="450" height="280"><img src="./assets/img/company/history_image01_sp.webp" srcset="./assets/img/company/history_image01_sp.webp 1x, ./assets/img/company/history_image01_sp@2x.webp 2x" width="225" height="140" alt="history">
+              <source media="(min-width: 751px)" srcset="./assets/img/company/history_image01.webp 1x, ./assets/img/company/history_image01@2x.webp 2x" width="450" height="280"><img src="./assets/img/company/history_image01_sp.webp" srcset="./assets/img/company/history_image01_sp.webp 1x, ./assets/img/company/history_image01_sp@2x.webp 2x" width="225" height="140" alt="事業所内の様子">
             </picture>
             <picture class="c-n-image u-n-history-image">
-              <source media="(min-width: 751px)" srcset="./assets/img/company/history_image02.webp 1x, ./assets/img/company/history_image02@2x.webp 2x" width="450" height="280"><img src="./assets/img/company/history_image02_sp.webp" srcset="./assets/img/company/history_image02_sp.webp 1x, ./assets/img/company/history_image02_sp@2x.webp 2x" width="225" height="140" alt="history">
+              <source media="(min-width: 751px)" srcset="./assets/img/company/history_image02.webp 1x, ./assets/img/company/history_image02@2x.webp 2x" width="450" height="280"><img src="./assets/img/company/history_image02_sp.webp" srcset="./assets/img/company/history_image02_sp.webp 1x, ./assets/img/company/history_image02_sp@2x.webp 2x" width="225" height="140" alt="事業所内の様子">
             </picture>
           </div>
         </div>
@@ -217,7 +217,7 @@
       <div class="l-n-separate">
         <div class="l-n-inner -wide">
           <picture class="c-n-image u-n-separate-image js-n-separate">
-            <source media="(min-width: 751px)" srcset="./assets/img/company/separate_image02.webp 1x, ./assets/img/company/separate_image02@2x.webp 2x" width="1920" height="1080"><img src="./assets/img/company/separate_image02_sp.webp" srcset="./assets/img/company/separate_image02_sp.webp 1x, ./assets/img/company/separate_image02_sp@2x.webp 2x" width="375" height="540" alt="">
+            <source media="(min-width: 751px)" srcset="./assets/img/company/separate_image02.webp 1x, ./assets/img/company/separate_image02@2x.webp 2x" width="1920" height="1080"><img src="./assets/img/company/separate_image02_sp.webp" srcset="./assets/img/company/separate_image02_sp.webp 1x, ./assets/img/company/separate_image02_sp@2x.webp 2x" width="375" height="540" alt="事業所内のパララックスイメージ">
           </picture>
         </div>
       </div>

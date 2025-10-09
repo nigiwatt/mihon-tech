@@ -45,3 +45,11 @@ add_action( 'wp_enqueue_scripts', function() {
         );
     }
 } );
+
+add_filter( 'script_loader_tag', function( $tag ) {
+
+    return str_replace( [
+        ' type="text/javascript"',
+        " type='text/javascript'"
+    ], '', $tag );
+} );

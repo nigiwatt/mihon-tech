@@ -32,3 +32,11 @@ add_action( 'wp_head', function() {
     echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" media="print" onload="this.media=\'all\'">';
     echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" media="print" onload="this.media=\'all\'">';
 }, 1 );
+
+add_filter( 'style_loader_tag', function( $html ) {
+
+    return str_replace( [
+        ' type="text/css"',
+        " type='text/css'"
+    ], '', $html );
+} );

@@ -63,7 +63,7 @@
                           ?>
                         </div>
                       </div>
-                    </nav>
+                    </div>
                   </div>
                 </div>
               </dialog>
